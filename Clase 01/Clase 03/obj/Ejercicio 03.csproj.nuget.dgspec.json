@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\L54556\\OneDrive - Kimberly-Clark\\Desktop\\labo 2\\Ejercicios\\Clase 01\\Clase 03\\Ejercicio 03.csproj": {}
+    "C:\\Users\\L54556\\OneDrive - Kimberly-Clark\\Desktop\\labo-2-Ejercicios\\Clase 01\\Clase 03\\Ejercicio 03.csproj": {}
   },
   "projects": {
-    "C:\\Users\\L54556\\OneDrive - Kimberly-Clark\\Desktop\\labo 2\\Ejercicios\\Clase 01\\Clase 03\\Ejercicio 03.csproj": {
+    "C:\\Users\\L54556\\OneDrive - Kimberly-Clark\\Desktop\\labo-2-Ejercicios\\Clase 01\\Clase 03\\Ejercicio 03.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\L54556\\OneDrive - Kimberly-Clark\\Desktop\\labo 2\\Ejercicios\\Clase 01\\Clase 03\\Ejercicio 03.csproj",
+        "projectUniqueName": "C:\\Users\\L54556\\OneDrive - Kimberly-Clark\\Desktop\\labo-2-Ejercicios\\Clase 01\\Clase 03\\Ejercicio 03.csproj",
         "projectName": "Ejercicio 03",
-        "projectPath": "C:\\Users\\L54556\\OneDrive - Kimberly-Clark\\Desktop\\labo 2\\Ejercicios\\Clase 01\\Clase 03\\Ejercicio 03.csproj",
+        "projectPath": "C:\\Users\\L54556\\OneDrive - Kimberly-Clark\\Desktop\\labo-2-Ejercicios\\Clase 01\\Clase 03\\Ejercicio 03.csproj",
         "packagesPath": "C:\\Users\\L54556\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\L54556\\OneDrive - Kimberly-Clark\\Desktop\\labo 2\\Ejercicios\\Clase 01\\Clase 03\\obj\\",
+        "outputPath": "C:\\Users\\L54556\\OneDrive - Kimberly-Clark\\Desktop\\labo-2-Ejercicios\\Clase 01\\Clase 03\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

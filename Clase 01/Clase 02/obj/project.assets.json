@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\L54556\\OneDrive - Kimberly-Clark\\Desktop\\labo 2\\Ejercicios\\Clase 01\\Clase 02\\Ejercicio 02.csproj",
+      "projectUniqueName": "C:\\Users\\L54556\\OneDrive - Kimberly-Clark\\Desktop\\labo-2-Ejercicios\\Clase 01\\Clase 02\\Ejercicio 02.csproj",
       "projectName": "Ejercicio 02",
-      "projectPath": "C:\\Users\\L54556\\OneDrive - Kimberly-Clark\\Desktop\\labo 2\\Ejercicios\\Clase 01\\Clase 02\\Ejercicio 02.csproj",
+      "projectPath": "C:\\Users\\L54556\\OneDrive - Kimberly-Clark\\Desktop\\labo-2-Ejercicios\\Clase 01\\Clase 02\\Ejercicio 02.csproj",
       "packagesPath": "C:\\Users\\L54556\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\L54556\\OneDrive - Kimberly-Clark\\Desktop\\labo 2\\Ejercicios\\Clase 01\\Clase 02\\obj\\",
+      "outputPath": "C:\\Users\\L54556\\OneDrive - Kimberly-Clark\\Desktop\\labo-2-Ejercicios\\Clase 01\\Clase 02\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

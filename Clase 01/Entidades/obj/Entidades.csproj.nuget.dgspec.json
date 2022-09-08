@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\L54556\\OneDrive - Kimberly-Clark\\Desktop\\labo 2\\Ejercicios\\Clase 01\\Entidades\\Entidades.csproj": {}
+    "C:\\Users\\L54556\\OneDrive - Kimberly-Clark\\Desktop\\labo-2-Ejercicios\\Clase 01\\Entidades\\Entidades.csproj": {}
   },
   "projects": {
-    "C:\\Users\\L54556\\OneDrive - Kimberly-Clark\\Desktop\\labo 2\\Ejercicios\\Clase 01\\Entidades\\Entidades.csproj": {
+    "C:\\Users\\L54556\\OneDrive - Kimberly-Clark\\Desktop\\labo-2-Ejercicios\\Clase 01\\Entidades\\Entidades.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\L54556\\OneDrive - Kimberly-Clark\\Desktop\\labo 2\\Ejercicios\\Clase 01\\Entidades\\Entidades.csproj",
+        "projectUniqueName": "C:\\Users\\L54556\\OneDrive - Kimberly-Clark\\Desktop\\labo-2-Ejercicios\\Clase 01\\Entidades\\Entidades.csproj",
         "projectName": "Entidades",
-        "projectPath": "C:\\Users\\L54556\\OneDrive - Kimberly-Clark\\Desktop\\labo 2\\Ejercicios\\Clase 01\\Entidades\\Entidades.csproj",
+        "projectPath": "C:\\Users\\L54556\\OneDrive - Kimberly-Clark\\Desktop\\labo-2-Ejercicios\\Clase 01\\Entidades\\Entidades.csproj",
         "packagesPath": "C:\\Users\\L54556\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\L54556\\OneDrive - Kimberly-Clark\\Desktop\\labo 2\\Ejercicios\\Clase 01\\Entidades\\obj\\",
+        "outputPath": "C:\\Users\\L54556\\OneDrive - Kimberly-Clark\\Desktop\\labo-2-Ejercicios\\Clase 01\\Entidades\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
