@@ -1,0 +1,7 @@
+C:\Users\L54556\OneDrive - Kimberly-Clark\Desktop\labo-2-Ejercicios\Clase 06\FormModal\obj\Debug\netcoreapp3.1\FormModal.csproj.AssemblyReference.cache
+C:\Users\L54556\OneDrive - Kimberly-Clark\Desktop\labo-2-Ejercicios\Clase 06\FormModal\obj\Debug\netcoreapp3.1\FormModal.FormModal.resources
+C:\Users\L54556\OneDrive - Kimberly-Clark\Desktop\labo-2-Ejercicios\Clase 06\FormModal\obj\Debug\netcoreapp3.1\FormModal.csproj.GenerateResource.cache
+C:\Users\L54556\OneDrive - Kimberly-Clark\Desktop\labo-2-Ejercicios\Clase 06\FormModal\obj\Debug\netcoreapp3.1\FormModal.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\L54556\OneDrive - Kimberly-Clark\Desktop\labo-2-Ejercicios\Clase 06\FormModal\obj\Debug\netcoreapp3.1\FormModal.AssemblyInfoInputs.cache
+C:\Users\L54556\OneDrive - Kimberly-Clark\Desktop\labo-2-Ejercicios\Clase 06\FormModal\obj\Debug\netcoreapp3.1\FormModal.AssemblyInfo.cs
+C:\Users\L54556\OneDrive - Kimberly-Clark\Desktop\labo-2-Ejercicios\Clase 06\FormModal\obj\Debug\netcoreapp3.1\FormModal.csproj.CoreCompileInputs.cache

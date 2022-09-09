@@ -1,0 +1,8 @@
+C:\Users\L54556\OneDrive - Kimberly-Clark\Desktop\labo-2-Ejercicios\Clase 06\WinFormsApp\obj\Debug\netcoreapp3.1\Ejercicio 01.csproj.AssemblyReference.cache
+C:\Users\L54556\OneDrive - Kimberly-Clark\Desktop\labo-2-Ejercicios\Clase 06\WinFormsApp\obj\Debug\netcoreapp3.1\WinFormsApp.Form1.resources
+C:\Users\L54556\OneDrive - Kimberly-Clark\Desktop\labo-2-Ejercicios\Clase 06\WinFormsApp\obj\Debug\netcoreapp3.1\Ejercicio 01.csproj.GenerateResource.cache
+C:\Users\L54556\OneDrive - Kimberly-Clark\Desktop\labo-2-Ejercicios\Clase 06\WinFormsApp\obj\Debug\netcoreapp3.1\Ejercicio 01.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\L54556\OneDrive - Kimberly-Clark\Desktop\labo-2-Ejercicios\Clase 06\WinFormsApp\obj\Debug\netcoreapp3.1\Ejercicio 01.AssemblyInfoInputs.cache
+C:\Users\L54556\OneDrive - Kimberly-Clark\Desktop\labo-2-Ejercicios\Clase 06\WinFormsApp\obj\Debug\netcoreapp3.1\Ejercicio 01.AssemblyInfo.cs
+C:\Users\L54556\OneDrive - Kimberly-Clark\Desktop\labo-2-Ejercicios\Clase 06\WinFormsApp\obj\Debug\netcoreapp3.1\Ejercicio 01.csproj.CoreCompileInputs.cache
+C:\Users\L54556\OneDrive - Kimberly-Clark\Desktop\labo-2-Ejercicios\Clase 06\WinFormsApp\obj\Debug\netcoreapp3.1\WinFormsApp.FormPrincipal.resources
