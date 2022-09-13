@@ -15,7 +15,7 @@ namespace Ejercicio_02
         public FormPrincipal()
         {
             InitializeComponent();
-        }
+        }//holooooo
 
     }
 }
