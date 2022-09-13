@@ -14,3 +14,7 @@ C:\Users\L54556\OneDrive - Kimberly-Clark\Desktop\labo-2-Ejercicios\Clase 06\Eje
 C:\Users\L54556\OneDrive - Kimberly-Clark\Desktop\labo-2-Ejercicios\Clase 06\Ejercicio 02\obj\Debug\netcoreapp3.1\Ejercicio 02.dll
 C:\Users\L54556\OneDrive - Kimberly-Clark\Desktop\labo-2-Ejercicios\Clase 06\Ejercicio 02\obj\Debug\netcoreapp3.1\Ejercicio 02.pdb
 C:\Users\L54556\OneDrive - Kimberly-Clark\Desktop\labo-2-Ejercicios\Clase 06\Ejercicio 02\obj\Debug\netcoreapp3.1\Ejercicio 02.genruntimeconfig.cache
+C:\Users\L54556\OneDrive - Kimberly-Clark\Desktop\labo-2-Ejercicios\Clase 06\Ejercicio 02\obj\Debug\netcoreapp3.1\Ejercicio_02.FormModal.resources
+C:\Users\L54556\OneDrive - Kimberly-Clark\Desktop\labo-2-Ejercicios\Clase 06\Ejercicio 02\bin\Debug\netcoreapp3.1\Entidades.dll
+C:\Users\L54556\OneDrive - Kimberly-Clark\Desktop\labo-2-Ejercicios\Clase 06\Ejercicio 02\bin\Debug\netcoreapp3.1\Entidades.pdb
+C:\Users\L54556\OneDrive - Kimberly-Clark\Desktop\labo-2-Ejercicios\Clase 06\Ejercicio 02\obj\Debug\netcoreapp3.1\Ejercicio 02.csproj.CopyComplete

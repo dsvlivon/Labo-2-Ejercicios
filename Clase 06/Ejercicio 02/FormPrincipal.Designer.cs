@@ -30,21 +30,21 @@ namespace Ejercicio_02
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.cbxCSharp = new System.Windows.Forms.CheckBox();
-            this.rdbMasculino = new System.Windows.Forms.RadioButton();
-            this.rdbFemenino = new System.Windows.Forms.RadioButton();
-            this.rdbNoBinario = new System.Windows.Forms.RadioButton();
-            this.cbxCMasMas = new System.Windows.Forms.CheckBox();
-            this.cbxJavaScript = new System.Windows.Forms.CheckBox();
-            this.btnIngresar = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.tbxNombre = new System.Windows.Forms.TextBox();
-            this.tbxDireccion = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.tbxDireccion = new System.Windows.Forms.TextBox();
+            this.tbxNombre = new System.Windows.Forms.TextBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.cbxJavaScript = new System.Windows.Forms.CheckBox();
+            this.cbxCMasMas = new System.Windows.Forms.CheckBox();
+            this.cbxCSharp = new System.Windows.Forms.CheckBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.rdbNoBinario = new System.Windows.Forms.RadioButton();
+            this.rdbFemenino = new System.Windows.Forms.RadioButton();
+            this.rdbMasculino = new System.Windows.Forms.RadioButton();
+            this.btnIngresar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.nudEdad = new System.Windows.Forms.NumericUpDown();
             this.lbxPaises = new System.Windows.Forms.ListBox();
             this.groupBox1.SuspendLayout();
@@ -67,124 +67,14 @@ namespace Ejercicio_02
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Detalles del usuario";
             // 
-            // groupBox2
+            // label4
             // 
-            this.groupBox2.Controls.Add(this.cbxJavaScript);
-            this.groupBox2.Controls.Add(this.cbxCMasMas);
-            this.groupBox2.Controls.Add(this.cbxCSharp);
-            this.groupBox2.Location = new System.Drawing.Point(374, 193);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(206, 150);
-            this.groupBox2.TabIndex = 3;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Cursos";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.rdbNoBinario);
-            this.groupBox3.Controls.Add(this.rdbFemenino);
-            this.groupBox3.Controls.Add(this.rdbMasculino);
-            this.groupBox3.Location = new System.Drawing.Point(374, 37);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(206, 150);
-            this.groupBox3.TabIndex = 3;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Género";
-            // 
-            // cbxCSharp
-            // 
-            this.cbxCSharp.AutoSize = true;
-            this.cbxCSharp.Location = new System.Drawing.Point(20, 45);
-            this.cbxCSharp.Name = "cbxCSharp";
-            this.cbxCSharp.Size = new System.Drawing.Size(60, 29);
-            this.cbxCSharp.TabIndex = 4;
-            this.cbxCSharp.Text = "C#";
-            this.cbxCSharp.UseVisualStyleBackColor = true;
-            // 
-            // rdbMasculino
-            // 
-            this.rdbMasculino.AutoSize = true;
-            this.rdbMasculino.Location = new System.Drawing.Point(20, 30);
-            this.rdbMasculino.Name = "rdbMasculino";
-            this.rdbMasculino.Size = new System.Drawing.Size(117, 29);
-            this.rdbMasculino.TabIndex = 5;
-            this.rdbMasculino.TabStop = true;
-            this.rdbMasculino.Text = "Masculino";
-            this.rdbMasculino.UseVisualStyleBackColor = true;
-            // 
-            // rdbFemenino
-            // 
-            this.rdbFemenino.AutoSize = true;
-            this.rdbFemenino.Location = new System.Drawing.Point(20, 65);
-            this.rdbFemenino.Name = "rdbFemenino";
-            this.rdbFemenino.Size = new System.Drawing.Size(115, 29);
-            this.rdbFemenino.TabIndex = 6;
-            this.rdbFemenino.TabStop = true;
-            this.rdbFemenino.Text = "Femenino";
-            this.rdbFemenino.UseVisualStyleBackColor = true;
-            // 
-            // rdbNoBinario
-            // 
-            this.rdbNoBinario.AutoSize = true;
-            this.rdbNoBinario.Location = new System.Drawing.Point(20, 100);
-            this.rdbNoBinario.Name = "rdbNoBinario";
-            this.rdbNoBinario.Size = new System.Drawing.Size(120, 29);
-            this.rdbNoBinario.TabIndex = 7;
-            this.rdbNoBinario.TabStop = true;
-            this.rdbNoBinario.Text = "No Binario";
-            this.rdbNoBinario.UseVisualStyleBackColor = true;
-            // 
-            // cbxCMasMas
-            // 
-            this.cbxCMasMas.AutoSize = true;
-            this.cbxCMasMas.Location = new System.Drawing.Point(20, 75);
-            this.cbxCMasMas.Name = "cbxCMasMas";
-            this.cbxCMasMas.Size = new System.Drawing.Size(73, 29);
-            this.cbxCMasMas.TabIndex = 5;
-            this.cbxCMasMas.Text = "C++";
-            this.cbxCMasMas.UseVisualStyleBackColor = true;
-            // 
-            // cbxJavaScript
-            // 
-            this.cbxJavaScript.AutoSize = true;
-            this.cbxJavaScript.Location = new System.Drawing.Point(20, 106);
-            this.cbxJavaScript.Name = "cbxJavaScript";
-            this.cbxJavaScript.Size = new System.Drawing.Size(123, 29);
-            this.cbxJavaScript.TabIndex = 6;
-            this.cbxJavaScript.Text = "JavaScropt";
-            this.cbxJavaScript.UseVisualStyleBackColor = true;
-            // 
-            // btnIngresar
-            // 
-            this.btnIngresar.Location = new System.Drawing.Point(374, 371);
-            this.btnIngresar.Name = "btnIngresar";
-            this.btnIngresar.Size = new System.Drawing.Size(206, 34);
-            this.btnIngresar.TabIndex = 4;
-            this.btnIngresar.Text = "Ingresar";
-            this.btnIngresar.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(34, 245);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(42, 25);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "País";
-            // 
-            // tbxNombre
-            // 
-            this.tbxNombre.Location = new System.Drawing.Point(132, 30);
-            this.tbxNombre.Name = "tbxNombre";
-            this.tbxNombre.Size = new System.Drawing.Size(150, 31);
-            this.tbxNombre.TabIndex = 0;
-            // 
-            // tbxDireccion
-            // 
-            this.tbxDireccion.Location = new System.Drawing.Point(132, 77);
-            this.tbxDireccion.Name = "tbxDireccion";
-            this.tbxDireccion.Size = new System.Drawing.Size(150, 31);
-            this.tbxDireccion.TabIndex = 1;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(17, 156);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(52, 25);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Edad";
             // 
             // label2
             // 
@@ -204,14 +94,125 @@ namespace Ejercicio_02
             this.label3.TabIndex = 7;
             this.label3.Text = "Nombre";
             // 
-            // label4
+            // tbxDireccion
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(17, 156);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 25);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Edad";
+            this.tbxDireccion.Location = new System.Drawing.Point(132, 77);
+            this.tbxDireccion.Name = "tbxDireccion";
+            this.tbxDireccion.Size = new System.Drawing.Size(150, 31);
+            this.tbxDireccion.TabIndex = 1;
+            // 
+            // tbxNombre
+            // 
+            this.tbxNombre.Location = new System.Drawing.Point(132, 30);
+            this.tbxNombre.Name = "tbxNombre";
+            this.tbxNombre.Size = new System.Drawing.Size(150, 31);
+            this.tbxNombre.TabIndex = 0;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.cbxJavaScript);
+            this.groupBox2.Controls.Add(this.cbxCMasMas);
+            this.groupBox2.Controls.Add(this.cbxCSharp);
+            this.groupBox2.Location = new System.Drawing.Point(374, 193);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(206, 150);
+            this.groupBox2.TabIndex = 3;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Cursos";
+            // 
+            // cbxJavaScript
+            // 
+            this.cbxJavaScript.AutoSize = true;
+            this.cbxJavaScript.Location = new System.Drawing.Point(20, 106);
+            this.cbxJavaScript.Name = "cbxJavaScript";
+            this.cbxJavaScript.Size = new System.Drawing.Size(123, 29);
+            this.cbxJavaScript.TabIndex = 6;
+            this.cbxJavaScript.Text = "JavaScropt";
+            this.cbxJavaScript.UseVisualStyleBackColor = true;
+            // 
+            // cbxCMasMas
+            // 
+            this.cbxCMasMas.AutoSize = true;
+            this.cbxCMasMas.Location = new System.Drawing.Point(20, 75);
+            this.cbxCMasMas.Name = "cbxCMasMas";
+            this.cbxCMasMas.Size = new System.Drawing.Size(73, 29);
+            this.cbxCMasMas.TabIndex = 5;
+            this.cbxCMasMas.Text = "C++";
+            this.cbxCMasMas.UseVisualStyleBackColor = true;
+            // 
+            // cbxCSharp
+            // 
+            this.cbxCSharp.AutoSize = true;
+            this.cbxCSharp.Location = new System.Drawing.Point(20, 45);
+            this.cbxCSharp.Name = "cbxCSharp";
+            this.cbxCSharp.Size = new System.Drawing.Size(60, 29);
+            this.cbxCSharp.TabIndex = 4;
+            this.cbxCSharp.Text = "C#";
+            this.cbxCSharp.UseVisualStyleBackColor = true;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.rdbNoBinario);
+            this.groupBox3.Controls.Add(this.rdbFemenino);
+            this.groupBox3.Controls.Add(this.rdbMasculino);
+            this.groupBox3.Location = new System.Drawing.Point(374, 37);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(206, 150);
+            this.groupBox3.TabIndex = 3;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Género";
+            // 
+            // rdbNoBinario
+            // 
+            this.rdbNoBinario.AutoSize = true;
+            this.rdbNoBinario.Location = new System.Drawing.Point(20, 100);
+            this.rdbNoBinario.Name = "rdbNoBinario";
+            this.rdbNoBinario.Size = new System.Drawing.Size(120, 29);
+            this.rdbNoBinario.TabIndex = 7;
+            this.rdbNoBinario.TabStop = true;
+            this.rdbNoBinario.Text = "No Binario";
+            this.rdbNoBinario.UseVisualStyleBackColor = true;
+            // 
+            // rdbFemenino
+            // 
+            this.rdbFemenino.AutoSize = true;
+            this.rdbFemenino.Location = new System.Drawing.Point(20, 65);
+            this.rdbFemenino.Name = "rdbFemenino";
+            this.rdbFemenino.Size = new System.Drawing.Size(115, 29);
+            this.rdbFemenino.TabIndex = 6;
+            this.rdbFemenino.TabStop = true;
+            this.rdbFemenino.Text = "Femenino";
+            this.rdbFemenino.UseVisualStyleBackColor = true;
+            // 
+            // rdbMasculino
+            // 
+            this.rdbMasculino.AutoSize = true;
+            this.rdbMasculino.Location = new System.Drawing.Point(20, 30);
+            this.rdbMasculino.Name = "rdbMasculino";
+            this.rdbMasculino.Size = new System.Drawing.Size(117, 29);
+            this.rdbMasculino.TabIndex = 5;
+            this.rdbMasculino.TabStop = true;
+            this.rdbMasculino.Text = "Masculino";
+            this.rdbMasculino.UseVisualStyleBackColor = true;
+            // 
+            // btnIngresar
+            // 
+            this.btnIngresar.Location = new System.Drawing.Point(374, 371);
+            this.btnIngresar.Name = "btnIngresar";
+            this.btnIngresar.Size = new System.Drawing.Size(206, 34);
+            this.btnIngresar.TabIndex = 4;
+            this.btnIngresar.Text = "Ingresar";
+            this.btnIngresar.UseVisualStyleBackColor = true;
+            this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(34, 245);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(42, 25);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "País";
             // 
             // nudEdad
             // 
@@ -229,7 +230,7 @@ namespace Ejercicio_02
             this.lbxPaises.Size = new System.Drawing.Size(287, 29);
             this.lbxPaises.TabIndex = 7;
             // 
-            // Form1
+            // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -241,8 +242,9 @@ namespace Ejercicio_02
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
-            this.Name = "Form1";
+            this.Name = "FormPrincipal";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.FormPrincipal_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

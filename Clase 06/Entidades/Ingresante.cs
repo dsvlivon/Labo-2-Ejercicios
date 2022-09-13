@@ -3,7 +3,7 @@ using System.Text;
 
 namespace Entidades
 {
-    public class Integrante
+    public class Ingresante
     {
         private string[] cursos;
         private string direccion;
@@ -12,7 +12,7 @@ namespace Entidades
         private string nombre;
         private string pais;
 
-        public Integrante(string n, string d, string g, string p, string[] c, int e)
+        public Ingresante(string n, string d, string g, string p, string[] c, int e)
         {
             this.nombre = n; this.direccion = d; this.genero = g;this.pais = p; this.cursos = c; this.edad = e;
         }
