@@ -25,7 +25,11 @@ namespace Entidades
             s.AppendLine($"direccion: {this.direccion}");
             s.AppendLine($"genero: {this.genero}");
             s.AppendLine($"pais: {this.pais}");
-            s.AppendLine($"cursos: {this.cursos}");
+            s.AppendLine("curso/s: ");
+            for (int i = 0; i < 2; i++)
+            {
+                s.Append(this.cursos[i]+" ");
+            }
             return s.ToString();
         }
     }

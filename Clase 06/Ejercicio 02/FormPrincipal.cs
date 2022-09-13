@@ -17,16 +17,17 @@ namespace Ejercicio_02
         public FormPrincipal()
         {
             InitializeComponent();
-        }//holooooo
+        }
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            string[] array = new string[0];
+            string[] array = checkCursos();
+            
             EPaises op;
             Enum.TryParse<EPaises>(lbxPaises.SelectedValue.ToString(), out op);
-            Int32.TryParse(nudEdad.Value.ToString(), out int i);
+            Int32.TryParse(nudEdad.Value.ToString(), out int x);
             string g = checkGenero();
-            ingresante = new Ingresante(tbxNombre.Text, tbxDireccion.Text, g, op.ToString(), array, i);
+            ingresante = new Ingresante(tbxNombre.Text, tbxDireccion.Text, g, op.ToString(), array, x);
             
             
             
@@ -46,16 +47,16 @@ namespace Ejercicio_02
             if (rdbMasculino.Checked) { x = "Masculino"; }
             else if(rdbFemenino.Checked) { x = "Femenino"; }
             else { x = "No Binario"; }
-            return "";
+            return x;
         }
 
-        public string checkCursos()
+        public string[] checkCursos()
         {
-            string x;
-            if (rdbMasculino.Checked) { x = "Masculino"; }
-            else if (rdbFemenino.Checked) { x = "Femenino"; }
-            else { x = "No Binario"; }
-            return "";
+            string[] array = new string[3];
+            if (cbxCSharp.Checked) { array[0] = "C#"; }
+            if (cbxCMasMas.Checked) { array[1] = "C++"; }
+            if (cbxJavaScript.Checked) { array[2] = "JavaScript"; }
+            return array;
         }
     }
 }
