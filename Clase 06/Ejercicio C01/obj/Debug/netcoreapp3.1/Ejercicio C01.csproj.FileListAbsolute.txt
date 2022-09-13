@@ -1,0 +1,19 @@
+C:\Users\L54556\OneDrive - Kimberly-Clark\Desktop\labo-2-Ejercicios\Clase 06\Ejercicio C01\bin\Debug\netcoreapp3.1\Ejercicio C01.exe
+C:\Users\L54556\OneDrive - Kimberly-Clark\Desktop\labo-2-Ejercicios\Clase 06\Ejercicio C01\bin\Debug\netcoreapp3.1\Ejercicio C01.deps.json
+C:\Users\L54556\OneDrive - Kimberly-Clark\Desktop\labo-2-Ejercicios\Clase 06\Ejercicio C01\bin\Debug\netcoreapp3.1\Ejercicio C01.runtimeconfig.json
+C:\Users\L54556\OneDrive - Kimberly-Clark\Desktop\labo-2-Ejercicios\Clase 06\Ejercicio C01\bin\Debug\netcoreapp3.1\Ejercicio C01.runtimeconfig.dev.json
+C:\Users\L54556\OneDrive - Kimberly-Clark\Desktop\labo-2-Ejercicios\Clase 06\Ejercicio C01\bin\Debug\netcoreapp3.1\Ejercicio C01.dll
+C:\Users\L54556\OneDrive - Kimberly-Clark\Desktop\labo-2-Ejercicios\Clase 06\Ejercicio C01\bin\Debug\netcoreapp3.1\Ejercicio C01.pdb
+C:\Users\L54556\OneDrive - Kimberly-Clark\Desktop\labo-2-Ejercicios\Clase 06\Ejercicio C01\obj\Debug\netcoreapp3.1\Ejercicio C01.csproj.AssemblyReference.cache
+C:\Users\L54556\OneDrive - Kimberly-Clark\Desktop\labo-2-Ejercicios\Clase 06\Ejercicio C01\obj\Debug\netcoreapp3.1\Ejercicio_C01.FormPrincipal.resources
+C:\Users\L54556\OneDrive - Kimberly-Clark\Desktop\labo-2-Ejercicios\Clase 06\Ejercicio C01\obj\Debug\netcoreapp3.1\Ejercicio C01.csproj.GenerateResource.cache
+C:\Users\L54556\OneDrive - Kimberly-Clark\Desktop\labo-2-Ejercicios\Clase 06\Ejercicio C01\obj\Debug\netcoreapp3.1\Ejercicio C01.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\L54556\OneDrive - Kimberly-Clark\Desktop\labo-2-Ejercicios\Clase 06\Ejercicio C01\obj\Debug\netcoreapp3.1\Ejercicio C01.AssemblyInfoInputs.cache
+C:\Users\L54556\OneDrive - Kimberly-Clark\Desktop\labo-2-Ejercicios\Clase 06\Ejercicio C01\obj\Debug\netcoreapp3.1\Ejercicio C01.AssemblyInfo.cs
+C:\Users\L54556\OneDrive - Kimberly-Clark\Desktop\labo-2-Ejercicios\Clase 06\Ejercicio C01\obj\Debug\netcoreapp3.1\Ejercicio C01.csproj.CoreCompileInputs.cache
+C:\Users\L54556\OneDrive - Kimberly-Clark\Desktop\labo-2-Ejercicios\Clase 06\Ejercicio C01\obj\Debug\netcoreapp3.1\Ejercicio C01.dll
+C:\Users\L54556\OneDrive - Kimberly-Clark\Desktop\labo-2-Ejercicios\Clase 06\Ejercicio C01\obj\Debug\netcoreapp3.1\Ejercicio C01.pdb
+C:\Users\L54556\OneDrive - Kimberly-Clark\Desktop\labo-2-Ejercicios\Clase 06\Ejercicio C01\obj\Debug\netcoreapp3.1\Ejercicio C01.genruntimeconfig.cache
+C:\Users\L54556\OneDrive - Kimberly-Clark\Desktop\labo-2-Ejercicios\Clase 06\Ejercicio C01\bin\Debug\netcoreapp3.1\Entidades.dll
+C:\Users\L54556\OneDrive - Kimberly-Clark\Desktop\labo-2-Ejercicios\Clase 06\Ejercicio C01\bin\Debug\netcoreapp3.1\Entidades.pdb
+C:\Users\L54556\OneDrive - Kimberly-Clark\Desktop\labo-2-Ejercicios\Clase 06\Ejercicio C01\obj\Debug\netcoreapp3.1\Ejercicio C01.csproj.CopyComplete
