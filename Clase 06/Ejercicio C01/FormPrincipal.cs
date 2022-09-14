@@ -29,15 +29,26 @@ namespace Ejercicio_C01
         {
             btnLockCotizacion.ImageList = imageList;
             //imageList.ImageSize = new Size(12, 12);
-            btnLockCotizacion.ImageIndex = 0;
+            btnLockCotizacion.ImageIndex = 0;//cerrado
+            tbxCotizacionDolar.Enabled = false;
+            tbxCotizacionEuro.Enabled = false;
+            tbxCotizacionPeso.Enabled = false;
         }
 
         private void btnLockCotizacion_Click(object sender, EventArgs e)
         {
             if (btnLockCotizacion.ImageIndex == 0)
             {
-                btnLockCotizacion.ImageIndex = 1;
-            } else { btnLockCotizacion.ImageIndex = 0; }
+                btnLockCotizacion.ImageIndex = 1;//cerrado
+                tbxCotizacionDolar.Enabled = true;
+                tbxCotizacionEuro.Enabled = true;
+                tbxCotizacionPeso.Enabled = true;
+            } else { 
+                btnLockCotizacion.ImageIndex = 0;
+                tbxCotizacionDolar.Enabled = false;
+                tbxCotizacionEuro.Enabled = false;
+                tbxCotizacionPeso.Enabled = false;
+            }
         }
     }
 }
