@@ -29,269 +29,307 @@ namespace Ejercicio_C01
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.btnEuro = new System.Windows.Forms.Button();
-            this.btnDolar = new System.Windows.Forms.Button();
-            this.btnPeso = new System.Windows.Forms.Button();
-            this.btnCandado = new System.Windows.Forms.Button();
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPrincipal));
+            this.lblEuro = new System.Windows.Forms.Label();
+            this.lblPeso = new System.Windows.Forms.Label();
+            this.lblDolar = new System.Windows.Forms.Label();
+            this.lblEuroA = new System.Windows.Forms.Label();
+            this.lblDolarA = new System.Windows.Forms.Label();
+            this.lblPesoA = new System.Windows.Forms.Label();
+            this.tbxEuroAEuro = new System.Windows.Forms.TextBox();
+            this.tbxDolarAEuro = new System.Windows.Forms.TextBox();
+            this.tbxPesoAEuro = new System.Windows.Forms.TextBox();
+            this.tbxPesoADolar = new System.Windows.Forms.TextBox();
+            this.tbxDolarADolar = new System.Windows.Forms.TextBox();
+            this.tbxEuroADolar = new System.Windows.Forms.TextBox();
+            this.tbxPesoAPeso = new System.Windows.Forms.TextBox();
+            this.tbxDolarAPeso = new System.Windows.Forms.TextBox();
+            this.tbxEuroAPeso = new System.Windows.Forms.TextBox();
+            this.tbxPeso = new System.Windows.Forms.TextBox();
+            this.tbxDolar = new System.Windows.Forms.TextBox();
+            this.tbxEuro = new System.Windows.Forms.TextBox();
+            this.btnConvertirEuro = new System.Windows.Forms.Button();
+            this.btnConvertirDolar = new System.Windows.Forms.Button();
+            this.btnConvertirPeso = new System.Windows.Forms.Button();
+            this.btnLockCotizacion = new System.Windows.Forms.Button();
             this.tbxCotizacionPeso = new System.Windows.Forms.TextBox();
             this.tbxCotizacionDolar = new System.Windows.Forms.TextBox();
             this.tbxCotizacionEuro = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lblCotizacion = new System.Windows.Forms.Label();
+            this.imageList = new System.Windows.Forms.ImageList(this.components);
             this.SuspendLayout();
             // 
-            // label1
+            // lblEuro
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(18, 120);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(48, 25);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Euro";
+            this.lblEuro.AutoSize = true;
+            this.lblEuro.Location = new System.Drawing.Point(13, 72);
+            this.lblEuro.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblEuro.Name = "lblEuro";
+            this.lblEuro.Size = new System.Drawing.Size(31, 15);
+            this.lblEuro.TabIndex = 1;
+            this.lblEuro.Text = "Euro";
             // 
-            // label3
+            // lblPeso
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(18, 219);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(49, 25);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Peso";
+            this.lblPeso.AutoSize = true;
+            this.lblPeso.Location = new System.Drawing.Point(13, 131);
+            this.lblPeso.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPeso.Name = "lblPeso";
+            this.lblPeso.Size = new System.Drawing.Size(32, 15);
+            this.lblPeso.TabIndex = 3;
+            this.lblPeso.Text = "Peso";
             // 
-            // label4
+            // lblDolar
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(18, 164);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(55, 25);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Dolar";
+            this.lblDolar.AutoSize = true;
+            this.lblDolar.Location = new System.Drawing.Point(13, 102);
+            this.lblDolar.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblDolar.Name = "lblDolar";
+            this.lblDolar.Size = new System.Drawing.Size(35, 15);
+            this.lblDolar.TabIndex = 4;
+            this.lblDolar.Text = "Dolar";
             // 
-            // label5
+            // lblEuroA
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(458, 87);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(48, 25);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "Euro";
+            this.lblEuroA.AutoSize = true;
+            this.lblEuroA.Location = new System.Drawing.Point(321, 52);
+            this.lblEuroA.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblEuroA.Name = "lblEuroA";
+            this.lblEuroA.Size = new System.Drawing.Size(31, 15);
+            this.lblEuroA.TabIndex = 5;
+            this.lblEuroA.Text = "Euro";
             // 
-            // label6
+            // lblDolarA
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(611, 87);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(55, 25);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "Dolar";
+            this.lblDolarA.AutoSize = true;
+            this.lblDolarA.Location = new System.Drawing.Point(428, 52);
+            this.lblDolarA.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblDolarA.Name = "lblDolarA";
+            this.lblDolarA.Size = new System.Drawing.Size(35, 15);
+            this.lblDolarA.TabIndex = 6;
+            this.lblDolarA.Text = "Dolar";
             // 
-            // label7
+            // lblPesoA
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(761, 87);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(49, 25);
-            this.label7.TabIndex = 7;
-            this.label7.Text = "Peso";
+            this.lblPesoA.AutoSize = true;
+            this.lblPesoA.Location = new System.Drawing.Point(533, 52);
+            this.lblPesoA.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPesoA.Name = "lblPesoA";
+            this.lblPesoA.Size = new System.Drawing.Size(32, 15);
+            this.lblPesoA.TabIndex = 7;
+            this.lblPesoA.Text = "Peso";
             // 
-            // textBox1
+            // tbxEuroAEuro
             // 
-            this.textBox1.Location = new System.Drawing.Point(407, 115);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(150, 31);
-            this.textBox1.TabIndex = 8;
+            this.tbxEuroAEuro.Location = new System.Drawing.Point(285, 69);
+            this.tbxEuroAEuro.Margin = new System.Windows.Forms.Padding(2);
+            this.tbxEuroAEuro.Name = "tbxEuroAEuro";
+            this.tbxEuroAEuro.Size = new System.Drawing.Size(106, 23);
+            this.tbxEuroAEuro.TabIndex = 8;
             // 
-            // textBox2
+            // tbxDolarAEuro
             // 
-            this.textBox2.Location = new System.Drawing.Point(407, 164);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(150, 31);
-            this.textBox2.TabIndex = 9;
+            this.tbxDolarAEuro.Location = new System.Drawing.Point(285, 98);
+            this.tbxDolarAEuro.Margin = new System.Windows.Forms.Padding(2);
+            this.tbxDolarAEuro.Name = "tbxDolarAEuro";
+            this.tbxDolarAEuro.Size = new System.Drawing.Size(106, 23);
+            this.tbxDolarAEuro.TabIndex = 9;
             // 
-            // textBox3
+            // tbxPesoAEuro
             // 
-            this.textBox3.Location = new System.Drawing.Point(407, 213);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(150, 31);
-            this.textBox3.TabIndex = 10;
+            this.tbxPesoAEuro.Location = new System.Drawing.Point(285, 128);
+            this.tbxPesoAEuro.Margin = new System.Windows.Forms.Padding(2);
+            this.tbxPesoAEuro.Name = "tbxPesoAEuro";
+            this.tbxPesoAEuro.Size = new System.Drawing.Size(106, 23);
+            this.tbxPesoAEuro.TabIndex = 10;
             // 
-            // textBox4
+            // tbxPesoADolar
             // 
-            this.textBox4.Location = new System.Drawing.Point(564, 213);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(150, 31);
-            this.textBox4.TabIndex = 13;
+            this.tbxPesoADolar.Location = new System.Drawing.Point(395, 128);
+            this.tbxPesoADolar.Margin = new System.Windows.Forms.Padding(2);
+            this.tbxPesoADolar.Name = "tbxPesoADolar";
+            this.tbxPesoADolar.Size = new System.Drawing.Size(106, 23);
+            this.tbxPesoADolar.TabIndex = 13;
             // 
-            // textBox5
+            // tbxDolarADolar
             // 
-            this.textBox5.Location = new System.Drawing.Point(564, 164);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(150, 31);
-            this.textBox5.TabIndex = 12;
+            this.tbxDolarADolar.Location = new System.Drawing.Point(395, 98);
+            this.tbxDolarADolar.Margin = new System.Windows.Forms.Padding(2);
+            this.tbxDolarADolar.Name = "tbxDolarADolar";
+            this.tbxDolarADolar.Size = new System.Drawing.Size(106, 23);
+            this.tbxDolarADolar.TabIndex = 12;
             // 
-            // textBox6
+            // tbxEuroADolar
             // 
-            this.textBox6.Location = new System.Drawing.Point(564, 115);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(150, 31);
-            this.textBox6.TabIndex = 11;
+            this.tbxEuroADolar.Location = new System.Drawing.Point(395, 69);
+            this.tbxEuroADolar.Margin = new System.Windows.Forms.Padding(2);
+            this.tbxEuroADolar.Name = "tbxEuroADolar";
+            this.tbxEuroADolar.Size = new System.Drawing.Size(106, 23);
+            this.tbxEuroADolar.TabIndex = 11;
             // 
-            // textBox7
+            // tbxPesoAPeso
             // 
-            this.textBox7.Location = new System.Drawing.Point(720, 213);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(150, 31);
-            this.textBox7.TabIndex = 16;
+            this.tbxPesoAPeso.Location = new System.Drawing.Point(504, 128);
+            this.tbxPesoAPeso.Margin = new System.Windows.Forms.Padding(2);
+            this.tbxPesoAPeso.Name = "tbxPesoAPeso";
+            this.tbxPesoAPeso.Size = new System.Drawing.Size(106, 23);
+            this.tbxPesoAPeso.TabIndex = 16;
             // 
-            // textBox8
+            // tbxDolarAPeso
             // 
-            this.textBox8.Location = new System.Drawing.Point(720, 164);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(150, 31);
-            this.textBox8.TabIndex = 15;
+            this.tbxDolarAPeso.Location = new System.Drawing.Point(504, 98);
+            this.tbxDolarAPeso.Margin = new System.Windows.Forms.Padding(2);
+            this.tbxDolarAPeso.Name = "tbxDolarAPeso";
+            this.tbxDolarAPeso.Size = new System.Drawing.Size(106, 23);
+            this.tbxDolarAPeso.TabIndex = 15;
             // 
-            // textBox9
+            // tbxEuroAPeso
             // 
-            this.textBox9.Location = new System.Drawing.Point(720, 115);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(150, 31);
-            this.textBox9.TabIndex = 14;
+            this.tbxEuroAPeso.Location = new System.Drawing.Point(504, 69);
+            this.tbxEuroAPeso.Margin = new System.Windows.Forms.Padding(2);
+            this.tbxEuroAPeso.Name = "tbxEuroAPeso";
+            this.tbxEuroAPeso.Size = new System.Drawing.Size(106, 23);
+            this.tbxEuroAPeso.TabIndex = 14;
             // 
-            // textBox10
+            // tbxPeso
             // 
-            this.textBox10.Location = new System.Drawing.Point(83, 213);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(150, 31);
-            this.textBox10.TabIndex = 19;
+            this.tbxPeso.Location = new System.Drawing.Point(58, 128);
+            this.tbxPeso.Margin = new System.Windows.Forms.Padding(2);
+            this.tbxPeso.Name = "tbxPeso";
+            this.tbxPeso.Size = new System.Drawing.Size(106, 23);
+            this.tbxPeso.TabIndex = 19;
             // 
-            // textBox11
+            // tbxDolar
             // 
-            this.textBox11.Location = new System.Drawing.Point(83, 164);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(150, 31);
-            this.textBox11.TabIndex = 18;
+            this.tbxDolar.Location = new System.Drawing.Point(58, 98);
+            this.tbxDolar.Margin = new System.Windows.Forms.Padding(2);
+            this.tbxDolar.Name = "tbxDolar";
+            this.tbxDolar.Size = new System.Drawing.Size(106, 23);
+            this.tbxDolar.TabIndex = 18;
             // 
-            // textBox12
+            // tbxEuro
             // 
-            this.textBox12.Location = new System.Drawing.Point(83, 115);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(150, 31);
-            this.textBox12.TabIndex = 17;
+            this.tbxEuro.Location = new System.Drawing.Point(58, 69);
+            this.tbxEuro.Margin = new System.Windows.Forms.Padding(2);
+            this.tbxEuro.Name = "tbxEuro";
+            this.tbxEuro.Size = new System.Drawing.Size(106, 23);
+            this.tbxEuro.TabIndex = 17;
             // 
-            // btnEuro
+            // btnConvertirEuro
             // 
-            this.btnEuro.Location = new System.Drawing.Point(248, 115);
-            this.btnEuro.Name = "btnEuro";
-            this.btnEuro.Size = new System.Drawing.Size(112, 34);
-            this.btnEuro.TabIndex = 20;
-            this.btnEuro.Text = "->";
-            this.btnEuro.UseVisualStyleBackColor = true;
+            this.btnConvertirEuro.Location = new System.Drawing.Point(174, 69);
+            this.btnConvertirEuro.Margin = new System.Windows.Forms.Padding(2);
+            this.btnConvertirEuro.Name = "btnConvertirEuro";
+            this.btnConvertirEuro.Size = new System.Drawing.Size(78, 20);
+            this.btnConvertirEuro.TabIndex = 20;
+            this.btnConvertirEuro.Text = "->";
+            this.btnConvertirEuro.UseVisualStyleBackColor = true;
             // 
-            // btnDolar
+            // btnConvertirDolar
             // 
-            this.btnDolar.Location = new System.Drawing.Point(248, 162);
-            this.btnDolar.Name = "btnDolar";
-            this.btnDolar.Size = new System.Drawing.Size(112, 34);
-            this.btnDolar.TabIndex = 21;
-            this.btnDolar.Text = "->";
-            this.btnDolar.UseVisualStyleBackColor = true;
+            this.btnConvertirDolar.Location = new System.Drawing.Point(174, 97);
+            this.btnConvertirDolar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnConvertirDolar.Name = "btnConvertirDolar";
+            this.btnConvertirDolar.Size = new System.Drawing.Size(78, 20);
+            this.btnConvertirDolar.TabIndex = 21;
+            this.btnConvertirDolar.Text = "->";
+            this.btnConvertirDolar.UseVisualStyleBackColor = true;
             // 
-            // btnPeso
+            // btnConvertirPeso
             // 
-            this.btnPeso.Location = new System.Drawing.Point(248, 211);
-            this.btnPeso.Name = "btnPeso";
-            this.btnPeso.Size = new System.Drawing.Size(112, 34);
-            this.btnPeso.TabIndex = 22;
-            this.btnPeso.Text = "->";
-            this.btnPeso.UseVisualStyleBackColor = true;
+            this.btnConvertirPeso.Location = new System.Drawing.Point(174, 127);
+            this.btnConvertirPeso.Margin = new System.Windows.Forms.Padding(2);
+            this.btnConvertirPeso.Name = "btnConvertirPeso";
+            this.btnConvertirPeso.Size = new System.Drawing.Size(78, 20);
+            this.btnConvertirPeso.TabIndex = 22;
+            this.btnConvertirPeso.Text = "->";
+            this.btnConvertirPeso.UseVisualStyleBackColor = true;
             // 
-            // btnCandado
+            // btnLockCotizacion
             // 
-            this.btnCandado.Location = new System.Drawing.Point(248, 32);
-            this.btnCandado.Name = "btnCandado";
-            this.btnCandado.Size = new System.Drawing.Size(112, 34);
-            this.btnCandado.TabIndex = 23;
-            this.btnCandado.Text = "button4";
-            this.btnCandado.UseVisualStyleBackColor = true;
+            this.btnLockCotizacion.Location = new System.Drawing.Point(174, 24);
+            this.btnLockCotizacion.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLockCotizacion.Name = "btnLockCotizacion";
+            this.btnLockCotizacion.Size = new System.Drawing.Size(78, 20);
+            this.btnLockCotizacion.TabIndex = 23;
+            this.btnLockCotizacion.UseVisualStyleBackColor = true;
+            this.btnLockCotizacion.Click += new System.EventHandler(this.btnLockCotizacion_Click);
             // 
             // tbxCotizacionPeso
             // 
-            this.tbxCotizacionPeso.Location = new System.Drawing.Point(720, 35);
+            this.tbxCotizacionPeso.Location = new System.Drawing.Point(504, 21);
+            this.tbxCotizacionPeso.Margin = new System.Windows.Forms.Padding(2);
             this.tbxCotizacionPeso.Name = "tbxCotizacionPeso";
-            this.tbxCotizacionPeso.Size = new System.Drawing.Size(150, 31);
+            this.tbxCotizacionPeso.Size = new System.Drawing.Size(106, 23);
             this.tbxCotizacionPeso.TabIndex = 26;
             // 
             // tbxCotizacionDolar
             // 
-            this.tbxCotizacionDolar.Location = new System.Drawing.Point(564, 35);
+            this.tbxCotizacionDolar.Location = new System.Drawing.Point(395, 21);
+            this.tbxCotizacionDolar.Margin = new System.Windows.Forms.Padding(2);
             this.tbxCotizacionDolar.Name = "tbxCotizacionDolar";
-            this.tbxCotizacionDolar.Size = new System.Drawing.Size(150, 31);
+            this.tbxCotizacionDolar.Size = new System.Drawing.Size(106, 23);
             this.tbxCotizacionDolar.TabIndex = 25;
             // 
             // tbxCotizacionEuro
             // 
-            this.tbxCotizacionEuro.Location = new System.Drawing.Point(407, 35);
+            this.tbxCotizacionEuro.Location = new System.Drawing.Point(285, 21);
+            this.tbxCotizacionEuro.Margin = new System.Windows.Forms.Padding(2);
             this.tbxCotizacionEuro.Name = "tbxCotizacionEuro";
-            this.tbxCotizacionEuro.Size = new System.Drawing.Size(150, 31);
+            this.tbxCotizacionEuro.Size = new System.Drawing.Size(106, 23);
             this.tbxCotizacionEuro.TabIndex = 24;
             // 
-            // label8
+            // lblCotizacion
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(83, 41);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(94, 25);
-            this.label8.TabIndex = 2;
-            this.label8.Text = "Cotizacion";
+            this.lblCotizacion.AutoSize = true;
+            this.lblCotizacion.Location = new System.Drawing.Point(58, 25);
+            this.lblCotizacion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCotizacion.Name = "lblCotizacion";
+            this.lblCotizacion.Size = new System.Drawing.Size(63, 15);
+            this.lblCotizacion.TabIndex = 2;
+            this.lblCotizacion.Text = "Cotizacion";
+            // 
+            // imageList
+            // 
+            this.imageList.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList.ImageStream")));
+            this.imageList.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList.Images.SetKeyName(0, "candado_abierto.png");
+            this.imageList.Images.SetKeyName(1, "candado_cerrado.png");
             // 
             // FormPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(898, 308);
+            this.ClientSize = new System.Drawing.Size(629, 185);
             this.Controls.Add(this.tbxCotizacionPeso);
             this.Controls.Add(this.tbxCotizacionDolar);
             this.Controls.Add(this.tbxCotizacionEuro);
-            this.Controls.Add(this.btnCandado);
-            this.Controls.Add(this.btnPeso);
-            this.Controls.Add(this.btnDolar);
-            this.Controls.Add(this.btnEuro);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.textBox11);
-            this.Controls.Add(this.textBox12);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnLockCotizacion);
+            this.Controls.Add(this.btnConvertirPeso);
+            this.Controls.Add(this.btnConvertirDolar);
+            this.Controls.Add(this.btnConvertirEuro);
+            this.Controls.Add(this.tbxPeso);
+            this.Controls.Add(this.tbxDolar);
+            this.Controls.Add(this.tbxEuro);
+            this.Controls.Add(this.tbxPesoAPeso);
+            this.Controls.Add(this.tbxDolarAPeso);
+            this.Controls.Add(this.tbxEuroAPeso);
+            this.Controls.Add(this.tbxPesoADolar);
+            this.Controls.Add(this.tbxDolarADolar);
+            this.Controls.Add(this.tbxEuroADolar);
+            this.Controls.Add(this.tbxPesoAEuro);
+            this.Controls.Add(this.tbxDolarAEuro);
+            this.Controls.Add(this.tbxEuroAEuro);
+            this.Controls.Add(this.lblPesoA);
+            this.Controls.Add(this.lblDolarA);
+            this.Controls.Add(this.lblEuroA);
+            this.Controls.Add(this.lblDolar);
+            this.Controls.Add(this.lblPeso);
+            this.Controls.Add(this.lblCotizacion);
+            this.Controls.Add(this.lblEuro);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormPrincipal";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -301,32 +339,33 @@ namespace Ejercicio_C01
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.Button btnEuro;
-        private System.Windows.Forms.Button btnDolar;
-        private System.Windows.Forms.Button btnPeso;
-        private System.Windows.Forms.Button btnCandado;
+        private System.Windows.Forms.Label lblEuro;
+        private System.Windows.Forms.Label lblPeso;
+        private System.Windows.Forms.Label lblDolar;
+        private System.Windows.Forms.Label lblEuroA;
+        private System.Windows.Forms.Label lblDolarA;
+        private System.Windows.Forms.Label lblPesoA;
+        private System.Windows.Forms.TextBox tbxEuroAEuro;
+        private System.Windows.Forms.TextBox tbxDolarAEuro;
+        private System.Windows.Forms.TextBox tbxPesoAEuro;
+        private System.Windows.Forms.TextBox tbxPesoADolar;
+        private System.Windows.Forms.TextBox tbxDolarADolar;
+        private System.Windows.Forms.TextBox tbxEuroADolar;
+        private System.Windows.Forms.TextBox tbxPesoAPeso;
+        private System.Windows.Forms.TextBox tbxDolarAPeso;
+        private System.Windows.Forms.TextBox tbxEuroAPeso;
+        private System.Windows.Forms.TextBox tbxPeso;
+        private System.Windows.Forms.TextBox tbxDolar;
+        private System.Windows.Forms.TextBox tbxEuro;
+        private System.Windows.Forms.Button btnConvertirEuro;
+        private System.Windows.Forms.Button btnConvertirDolar;
+        private System.Windows.Forms.Button btnConvertirPeso;
+        private System.Windows.Forms.Button btnLockCotizacion;
         private System.Windows.Forms.TextBox tbxCotizacionPeso;
         private System.Windows.Forms.TextBox tbxCotizacionDolar;
         private System.Windows.Forms.TextBox tbxCotizacionEuro;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblCotizacion;
+        private System.Windows.Forms.ImageList imageList;
     }
 }
 

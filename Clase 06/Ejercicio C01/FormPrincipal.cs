@@ -22,6 +22,22 @@ namespace Ejercicio_C01
             tbxCotizacionEuro.Text = Euro.getCotizacion().ToString();
             tbxCotizacionDolar.Text = Dolar.getCotizacion().ToString();
             tbxCotizacionPeso.Text = Peso.getCotizacion().ToString();
+            AddMyImage();    
+        }
+
+        private void AddMyImage()
+        {
+            btnLockCotizacion.ImageList = imageList;
+            //imageList.ImageSize = new Size(12, 12);
+            btnLockCotizacion.ImageIndex = 0;
+        }
+
+        private void btnLockCotizacion_Click(object sender, EventArgs e)
+        {
+            if (btnLockCotizacion.ImageIndex == 0)
+            {
+                btnLockCotizacion.ImageIndex = 1;
+            } else { btnLockCotizacion.ImageIndex = 0; }
         }
     }
 }
