@@ -28,11 +28,8 @@ namespace Ejercicio_C01
         private void AddMyImage()
         {
             btnLockCotizacion.ImageList = imageList;
-            //imageList.ImageSize = new Size(12, 12);
             btnLockCotizacion.ImageIndex = 0;//cerrado
-            tbxCotizacionDolar.Enabled = false;
-            tbxCotizacionEuro.Enabled = false;
-            tbxCotizacionPeso.Enabled = false;
+            SwitchTextBox(false);
         }
 
         private void btnLockCotizacion_Click(object sender, EventArgs e)
@@ -40,15 +37,29 @@ namespace Ejercicio_C01
             if (btnLockCotizacion.ImageIndex == 0)
             {
                 btnLockCotizacion.ImageIndex = 1;//cerrado
-                tbxCotizacionDolar.Enabled = true;
-                tbxCotizacionEuro.Enabled = true;
-                tbxCotizacionPeso.Enabled = true;
+                SwitchTextBox(true);
             } else { 
                 btnLockCotizacion.ImageIndex = 0;
-                tbxCotizacionDolar.Enabled = false;
-                tbxCotizacionEuro.Enabled = false;
-                tbxCotizacionPeso.Enabled = false;
+                SwitchTextBox(false);
             }
+        }
+
+        private void SwitchTextBox(bool b) {
+            tbxCotizacionDolar.Enabled = b;
+            tbxCotizacionEuro.Enabled = b;
+            tbxCotizacionPeso.Enabled = b;
+        }
+
+        private void tbxCotizacionDolar_LostFocus(object sender, EventArgs e)
+        {
+            if (Int32.TryParse(tbxCotizacionDolar.Text, out int i))
+            {
+                if (i != 1)
+                {
+                    tbxCotizacionDolar.Text = 1.ToString();
+                }
+            }
+            tbxCotizacionDolar.Text = 1.ToString();
         }
     }
 }
