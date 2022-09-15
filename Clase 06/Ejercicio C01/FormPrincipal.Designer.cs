@@ -118,6 +118,7 @@ namespace Ejercicio_C01
             // 
             this.tbxEuroAEuro.Location = new System.Drawing.Point(407, 115);
             this.tbxEuroAEuro.Name = "tbxEuroAEuro";
+            this.tbxEuroAEuro.ReadOnly = true;
             this.tbxEuroAEuro.Size = new System.Drawing.Size(150, 31);
             this.tbxEuroAEuro.TabIndex = 8;
             // 
@@ -125,6 +126,7 @@ namespace Ejercicio_C01
             // 
             this.tbxDolarAEuro.Location = new System.Drawing.Point(407, 163);
             this.tbxDolarAEuro.Name = "tbxDolarAEuro";
+            this.tbxDolarAEuro.ReadOnly = true;
             this.tbxDolarAEuro.Size = new System.Drawing.Size(150, 31);
             this.tbxDolarAEuro.TabIndex = 9;
             // 
@@ -132,6 +134,7 @@ namespace Ejercicio_C01
             // 
             this.tbxPesoAEuro.Location = new System.Drawing.Point(407, 213);
             this.tbxPesoAEuro.Name = "tbxPesoAEuro";
+            this.tbxPesoAEuro.ReadOnly = true;
             this.tbxPesoAEuro.Size = new System.Drawing.Size(150, 31);
             this.tbxPesoAEuro.TabIndex = 10;
             // 
@@ -139,6 +142,7 @@ namespace Ejercicio_C01
             // 
             this.tbxPesoADolar.Location = new System.Drawing.Point(564, 213);
             this.tbxPesoADolar.Name = "tbxPesoADolar";
+            this.tbxPesoADolar.ReadOnly = true;
             this.tbxPesoADolar.Size = new System.Drawing.Size(150, 31);
             this.tbxPesoADolar.TabIndex = 13;
             // 
@@ -146,6 +150,7 @@ namespace Ejercicio_C01
             // 
             this.tbxDolarADolar.Location = new System.Drawing.Point(564, 163);
             this.tbxDolarADolar.Name = "tbxDolarADolar";
+            this.tbxDolarADolar.ReadOnly = true;
             this.tbxDolarADolar.Size = new System.Drawing.Size(150, 31);
             this.tbxDolarADolar.TabIndex = 12;
             // 
@@ -153,6 +158,7 @@ namespace Ejercicio_C01
             // 
             this.tbxEuroADolar.Location = new System.Drawing.Point(564, 115);
             this.tbxEuroADolar.Name = "tbxEuroADolar";
+            this.tbxEuroADolar.ReadOnly = true;
             this.tbxEuroADolar.Size = new System.Drawing.Size(150, 31);
             this.tbxEuroADolar.TabIndex = 11;
             // 
@@ -160,6 +166,7 @@ namespace Ejercicio_C01
             // 
             this.tbxPesoAPeso.Location = new System.Drawing.Point(720, 213);
             this.tbxPesoAPeso.Name = "tbxPesoAPeso";
+            this.tbxPesoAPeso.ReadOnly = true;
             this.tbxPesoAPeso.Size = new System.Drawing.Size(150, 31);
             this.tbxPesoAPeso.TabIndex = 16;
             // 
@@ -167,6 +174,7 @@ namespace Ejercicio_C01
             // 
             this.tbxDolarAPeso.Location = new System.Drawing.Point(720, 163);
             this.tbxDolarAPeso.Name = "tbxDolarAPeso";
+            this.tbxDolarAPeso.ReadOnly = true;
             this.tbxDolarAPeso.Size = new System.Drawing.Size(150, 31);
             this.tbxDolarAPeso.TabIndex = 15;
             // 
@@ -174,6 +182,7 @@ namespace Ejercicio_C01
             // 
             this.tbxEuroAPeso.Location = new System.Drawing.Point(720, 115);
             this.tbxEuroAPeso.Name = "tbxEuroAPeso";
+            this.tbxEuroAPeso.ReadOnly = true;
             this.tbxEuroAPeso.Size = new System.Drawing.Size(150, 31);
             this.tbxEuroAPeso.TabIndex = 14;
             // 
@@ -206,6 +215,7 @@ namespace Ejercicio_C01
             this.btnConvertirEuro.TabIndex = 20;
             this.btnConvertirEuro.Text = "->";
             this.btnConvertirEuro.UseVisualStyleBackColor = true;
+            this.btnConvertirEuro.Click += new System.EventHandler(this.btnConvertirEuro_Click);
             // 
             // btnConvertirDolar
             // 

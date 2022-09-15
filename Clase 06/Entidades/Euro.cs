@@ -39,34 +39,28 @@ namespace Entidades
             Dolar dolar = new Dolar(d.cantidad * Dolar.getCotizacion());
             return dolar;
         }
-
         public static explicit operator Peso(Euro d)
         {
             Peso peso = new Peso(d.cantidad * Peso.getCotizacion());
             return peso;
         }
-
         public static implicit operator Euro (double d)
         {
             Euro euro = new Euro(d);
             return euro;
         }
-
         public static bool operator ==(Euro d, Dolar e)
         {
             return d.cantidad == e.getCantidad();
         }
-
         public static bool operator !=(Euro d, Dolar e)
         {
             return !(d == e);
         }
-
         public static bool operator ==(Euro d, Peso e)
         {
             return d.cantidad == e.getCantidad();
         }
-
         public static bool operator !=(Euro d, Peso e)
         {
             return !(d == e);
@@ -75,7 +69,6 @@ namespace Entidades
         {
             return e1.cantidad == e2.cantidad;
         }
-
         public static bool operator !=(Euro e1, Euro e2)
         {
             return !(e2 == e1);
@@ -102,6 +95,8 @@ namespace Entidades
             return aux;
         }
 
-        public static void SetCotizacion() { }
+        public static void SetCotizacion(double value) {
+            cotizRespectoDolar = value;
+        }
     }
 }

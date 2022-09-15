@@ -101,6 +101,9 @@ namespace Entidades
             Peso aux = new Peso(p.cantidad + e.getCantidad());
             return aux;
         }
-        public static void SetCotizacion() { }
+        public static void SetCotizacion(double value)
+        {
+            cotizRespectoDolar = value;
+        }
     }
 }

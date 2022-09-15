@@ -91,6 +91,16 @@ namespace Entidades
             return false;
         }
 
+        public static explicit operator Dolar(string v)
+        {
+            throw new NotImplementedException();
+        }
+
+        public static explicit operator Dolar(Euro v)
+        {
+            throw new NotImplementedException();
+        }
+
         public static bool operator !=(Dolar d1, Dolar d2)
         {
             if (d1.cantidad != d2.cantidad)

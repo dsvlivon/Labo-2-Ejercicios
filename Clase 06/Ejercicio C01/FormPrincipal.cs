@@ -48,6 +48,8 @@ namespace Ejercicio_C01
             tbxCotizacionDolar.Enabled = b;
             tbxCotizacionEuro.Enabled = b;
             tbxCotizacionPeso.Enabled = b;
+            Euro.SetCotizacion(Convert.ToDouble(tbxCotizacionEuro.Text));
+            Peso.SetCotizacion(Convert.ToDouble(tbxCotizacionPeso.Text));
         }
 
         private void tbxCotizacionDolar_LostFocus(object sender, EventArgs e)
@@ -60,6 +62,15 @@ namespace Ejercicio_C01
                 }
             }
             tbxCotizacionDolar.Text = 1.ToString();
+
+
+        }
+
+        private void btnConvertirEuro_Click(object sender, EventArgs e)
+        {
+            tbxEuroAEuro.Text = Euro.getCotizacion().ToString();
+            //tbxEuroADolar.Text = (Dolar)unEuro.ToString();
+            tbxEuroAPeso.Text = 1.ToString();
         }
     }
 }
