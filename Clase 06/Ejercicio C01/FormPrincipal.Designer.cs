@@ -225,6 +225,7 @@ namespace Ejercicio_C01
             this.btnConvertirDolar.TabIndex = 21;
             this.btnConvertirDolar.Text = "->";
             this.btnConvertirDolar.UseVisualStyleBackColor = true;
+            this.btnConvertirDolar.Click += new System.EventHandler(this.btnConvertirDolar_Click);
             // 
             // btnConvertirPeso
             // 
@@ -234,6 +235,7 @@ namespace Ejercicio_C01
             this.btnConvertirPeso.TabIndex = 22;
             this.btnConvertirPeso.Text = "->";
             this.btnConvertirPeso.UseVisualStyleBackColor = true;
+            this.btnConvertirPeso.Click += new System.EventHandler(this.btnConvertirPeso_Click);
             // 
             // btnLockCotizacion
             // 

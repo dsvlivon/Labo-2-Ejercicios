@@ -39,7 +39,7 @@ namespace Consola
             //unEuro = unPeso; 
             //unPeso = unDolar;
             //unDolar = unEuro;
-            //estas no funcan xq no hay hechas implicitas p eso, solo implicitas Moneda(double)
+            //estas no funcaban xq no hay hechas implicitas p eso, solo implicitas Moneda(double)
             double miDbl = 2.0;
             Dolar aux = miDbl;//x eso esa si funca
             Console.WriteLine("implicita: "+aux.getCantidad());
