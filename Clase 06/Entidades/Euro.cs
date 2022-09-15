@@ -38,7 +38,6 @@ namespace Entidades
         }
         public static explicit operator Peso(Euro e)
         {
-            //Dolar dolar = new Dolar(Convert.ToDouble(e.cantidad * Dolar.getCotizacion())); aca hay algo raro
             Peso peso = new Peso(Convert.ToDouble((e.cantidad / Peso.getCotizacion())*Euro.getCotizacion()));
             return peso;
         }
@@ -47,12 +46,6 @@ namespace Entidades
             Euro euro = new Euro(d);
             return euro;
         }
-
-        //public static explicit operator Euro(Peso p)
-        //{
-        //    Euro euro = new Euro(Convert.ToDouble(p.cantidad * Euro.getCotizacion()));
-        //    return euro;
-        //}
 
         public static bool operator ==(Euro d, Dolar e)
         {
