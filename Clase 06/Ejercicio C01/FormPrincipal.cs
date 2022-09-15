@@ -13,9 +13,9 @@ namespace Ejercicio_C01
 {
     public partial class FormPrincipal : Form
     {
-        Dolar unDolar = new Dolar(1);
-        Euro unEuro = new Euro(1);
-        Peso unPeso = new Peso(1);
+        Dolar unDolar;
+        Euro unEuro;
+        Peso unPeso;
         public FormPrincipal()
         {
             InitializeComponent();
@@ -68,6 +68,8 @@ namespace Ejercicio_C01
 
         private void btnConvertirEuro_Click(object sender, EventArgs e)
         {
+            Double x = Convert.ToDouble(tbxEuro.Text);
+                        
             tbxEuroAEuro.Text = Euro.getCotizacion().ToString();
             //tbxEuroADolar.Text = (Dolar)unEuro.ToString();
             tbxEuroAPeso.Text = 1.ToString();

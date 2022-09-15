@@ -10,17 +10,14 @@ namespace Entidades
     {
         double cantidad;
         static double cotizRespectoDolar;
-
         static Peso()
         {
-            cotizRespectoDolar = 0.023;
+            cotizRespectoDolar = 0.25;
         }
-
         public Peso(double cantidad)
         {
             this.cantidad = cantidad;
         }
-
         public Peso(double cantidad, double cotizacion) : this(cantidad)
         {
             cotizRespectoDolar = cotizacion;
@@ -29,27 +26,30 @@ namespace Entidades
         {
             return cotizRespectoDolar;
         }
-
         public double getCantidad()
         {
             return this.cantidad;
         }
 
-        public static explicit operator Dolar (Peso d)
+        public static explicit operator Dolar (Peso p)//ok
         {
-            Dolar dolar = new Dolar(d.cantidad * Dolar.getCotizacion());
+            var x = p.cantidad;
+            var y = Peso.getCotizacion();
+            var res = x * y;
+            Dolar dolar = new Dolar(Convert.ToDouble(res));
+
             return dolar;
         }
 
-        public static explicit operator Euro(Peso d)
+        public static explicit operator Euro(Peso p)//ok
         {
-            Euro euro = new Euro(d.cantidad * Peso.getCotizacion());
+            Euro euro = new Euro(Convert.ToDouble(p.cantidad * Euro.getCotizacion()));
             return euro;
         }
 
-        public static implicit operator Peso(double d)
+        public static implicit operator Peso(double p)
         {
-            Peso peso = new Peso(d);
+            Peso peso = new Peso(p);
             return peso;
         }
 
@@ -57,7 +57,6 @@ namespace Entidades
         {
             return d.cantidad == e.getCantidad();
         }
-
         public static bool operator !=(Peso d, Dolar e)
         {
             return !(d == e);
@@ -66,7 +65,6 @@ namespace Entidades
         {
             return d.cantidad == e.getCantidad();
         }
-
         public static bool operator !=(Peso d, Euro e)
         {
             return !(d == e);
@@ -75,12 +73,10 @@ namespace Entidades
         {
             return p1.cantidad == p2.cantidad;
         }
-
         public static bool operator !=(Peso p1, Peso p2)
         {
             return !(p2 == p1);
         }
-
         public static Peso operator -(Peso p, Dolar e)
         {
             Peso aux = new Peso(p.cantidad - e.getCantidad());

@@ -12,14 +12,12 @@ namespace Entidades
         private static double cotizRespectoDolar;
         static Euro()
         {
-            cotizRespectoDolar = 0.89;
+            cotizRespectoDolar = 0.5;
         }
-
         public Euro(double cantidad)
         {
             this.cantidad = cantidad;
         }
-
         public Euro(double cantidad, double cotizacion) : this(cantidad)
         {
             cotizRespectoDolar = cotizacion;
@@ -28,20 +26,20 @@ namespace Entidades
         {
             return cotizRespectoDolar;
         }
-
         public double getCantidad()
         {
             return this.cantidad;
         }
 
-        public static explicit operator Dolar(Euro d)
+        public static explicit operator Dolar(Euro e)
         {
-            Dolar dolar = new Dolar(d.cantidad * Dolar.getCotizacion());
+            Dolar dolar = new Dolar(Convert.ToDouble(e.cantidad * Euro.getCotizacion()));
             return dolar;
         }
-        public static explicit operator Peso(Euro d)
+        public static explicit operator Peso(Euro e)
         {
-            Peso peso = new Peso(d.cantidad * Peso.getCotizacion());
+            //Dolar dolar = new Dolar(Convert.ToDouble(e.cantidad * Dolar.getCotizacion())); aca hay algo raro
+            Peso peso = new Peso(Convert.ToDouble((e.cantidad / Peso.getCotizacion())*Euro.getCotizacion()));
             return peso;
         }
         public static implicit operator Euro (double d)
@@ -49,6 +47,13 @@ namespace Entidades
             Euro euro = new Euro(d);
             return euro;
         }
+
+        //public static explicit operator Euro(Peso p)
+        //{
+        //    Euro euro = new Euro(Convert.ToDouble(p.cantidad * Euro.getCotizacion()));
+        //    return euro;
+        //}
+
         public static bool operator ==(Euro d, Dolar e)
         {
             return d.cantidad == e.getCantidad();
@@ -73,7 +78,6 @@ namespace Entidades
         {
             return !(e2 == e1);
         }
-
         public static Euro operator -(Euro e, Dolar d)
         {
             Euro aux = new Euro(e.cantidad - d.getCantidad());
@@ -94,7 +98,6 @@ namespace Entidades
             Euro aux = new Euro(e.cantidad + p.getCantidad());
             return aux;
         }
-
         public static void SetCotizacion(double value) {
             cotizRespectoDolar = value;
         }

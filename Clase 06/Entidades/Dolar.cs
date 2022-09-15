@@ -10,42 +10,35 @@ namespace Entidades
     {
         private double cantidad;
         private static double cotizRespectoDolar;
-
         static Dolar()
         {
             cotizRespectoDolar = 1;
         }
-
         public Dolar(double cantidad)
         {
             this.cantidad=cantidad;
         }
-
         public Dolar(double cantidad, double cotizacion):this(cantidad)
         {
             cotizRespectoDolar = cotizacion;
         }
-
         public static double getCotizacion()
         {
             return cotizRespectoDolar;
         }
-
         public double getCantidad()
         {
             return this.cantidad;
         }
-
         public static explicit operator Euro(Dolar d)
         {
-            Euro euro = new Euro(d.cantidad*Euro.getCotizacion());//busca el constructor q recibe cant y tipo de parametros q estoy pasando
-            //como d.cantidad y euro.getCotizacion son doubles, sigue double.
+            Euro euro = new Euro(Convert.ToDouble(d.cantidad / Euro.getCotizacion()));//ok
             return euro;
         }
 
         public static explicit operator Peso(Dolar d)
         {
-            Peso peso = new Peso(d.cantidad * Peso.getCotizacion());
+            Peso peso = new Peso(Convert.ToDouble(d.cantidad / Peso.getCotizacion()));//ok
             return peso;
         }
 
@@ -63,7 +56,6 @@ namespace Entidades
             }
             return false;
         }
-
         public static bool operator !=(Dolar d, Euro e)
         {
             if (d.cantidad != e.getCantidad())
@@ -72,12 +64,10 @@ namespace Entidades
             }
             return false;
         }
-
         public static bool operator ==(Dolar d, Peso e)
         {
             return d.cantidad == e.getCantidad();
         }
-
         public static bool operator !=(Dolar d, Peso e)
         {
             return !(d == e);
@@ -90,17 +80,6 @@ namespace Entidades
             }
             return false;
         }
-
-        public static explicit operator Dolar(string v)
-        {
-            throw new NotImplementedException();
-        }
-
-        public static explicit operator Dolar(Euro v)
-        {
-            throw new NotImplementedException();
-        }
-
         public static bool operator !=(Dolar d1, Dolar d2)
         {
             if (d1.cantidad != d2.cantidad)
@@ -109,7 +88,6 @@ namespace Entidades
             }
             return false;
         }
-
         public static Dolar operator -(Dolar d, Euro e)
         {
             Dolar aux = new Dolar(d.cantidad - e.getCantidad());
