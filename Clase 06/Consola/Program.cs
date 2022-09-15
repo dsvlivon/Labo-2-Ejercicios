@@ -36,11 +36,13 @@ namespace Consola
             Peso r = (Peso)unDolar;
             Console.WriteLine("un dolar son : " + r.getCantidad() + " pesos");
 
-            //unEuro = unPeso;
+            //unEuro = unPeso; 
             //unPeso = unDolar;
             //unDolar = unEuro;
-
-            //Console.WriteLine("Intento d explicita: " +unEuro); 
+            //estas no funcan xq no hay hechas implicitas p eso, solo implicitas Moneda(double)
+            double miDbl = 2.0;
+            Dolar aux = miDbl;//x eso esa si funca
+            Console.WriteLine("implicita: "+aux.getCantidad());
 
             var phone = "55 11 987765544";
             t = phone;//#1 implicita  dsd Telefono
