@@ -3,7 +3,7 @@ using System.Text;
 
 namespace Entidades
 {
-    public enum eTipoCliente { PoliticoCorrupto, EmpesarioCorrupto, JugadorDeFutbol, Financista, SinTipo};
+    public enum eTipoCliente { PoliticoCorrupto, EmpresarioCorrupto, JugadorDeFutbol, Financista, SinTipo};
     public enum eParaisosFiscales{ Anguila, Belice, Delaware, Gibraltar, Hong_Kong, Mauricio, Panama, Seychelles, Singapur, Suiza};
     public class Cliente
     {
@@ -18,7 +18,7 @@ namespace Entidades
             this._tipoDeCliente= eTipoCliente.SinTipo;
         }
 
-        public Cliente(eTipoCliente e)
+        public Cliente(eTipoCliente e):this()
         {
             this._tipoDeCliente = e;
         }
@@ -51,10 +51,6 @@ namespace Entidades
             return s.ToString();
         }
 
-        private string RetornarDatos(Cliente c)
-        {
-            return "";
-        }
-
+        public static string RetornarDatos(Cliente c) { return c.RetornarDatos(); }
     }
 }
