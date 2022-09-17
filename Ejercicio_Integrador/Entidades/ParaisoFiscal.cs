@@ -20,15 +20,16 @@ namespace Entidades
             StringBuilder s = new StringBuilder();
             s.AppendLine($"Fecha: {ParaisoFiscal.fechaInicioActividades}");
             s.AppendLine($"lugar: {this._lugar}");
-            s.AppendLine($"Fecha: {ParaisoFiscal.cantidadDeCuentas}");
-            s.AppendLine($"Fecha: {ParaisoFiscal.fechaInicioActividades}");
-            foreach (var item in _listadoCuentas)
+            s.AppendLine($"cant. cuuentas: {ParaisoFiscal.cantidadDeCuentas}");
+            foreach (var item in this._listadoCuentas)
             {
                 s.AppendLine($"N° cuenta: {(int)item}");
                 s.AppendLine($"saldo: {item.Saldo}");
                 s.AppendLine($"--------------------");
                 s.AppendLine($"     nombre: {Cliente.RetornarDatos(item.Dueño)}");
             }
+
+            Console.WriteLine(s.ToString());
         }
 
         static ParaisoFiscal()

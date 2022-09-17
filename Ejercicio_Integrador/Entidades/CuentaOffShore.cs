@@ -10,8 +10,8 @@ namespace Entidades
         private int _numeroCuenta;
         private double _saldo;
 
-        public Cliente Dueño { get; }
-        public double Saldo { get; set; }
+        public Cliente Dueño { get { return this._dueño; } }
+        public double Saldo { get { return this._saldo; } set { this._saldo = value; } }
 
         public CuentaOffShore(Cliente c, int n, double s)
         {
