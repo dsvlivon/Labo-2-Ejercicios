@@ -12,7 +12,18 @@ namespace Entidades
         private float promedioGoles;
         private int totalGoles;
 
-        public string Nombre  { get; }//lo Agregue p mostrar el msg
+        public string Nombre  { get; set; }//lo Agregue p mostrar el msg
+        public int Goles { get { return this.totalGoles; } }
+        public int Partidos { get { return this.partidosJugados; } }
+        public int Dni { get { return this.dni; } set { this.dni = value; } }
+        public float Promedio { get
+            {
+                if (this.partidosJugados > 0)
+                {
+                    return this.totalGoles / this.partidosJugados;
+                } else { return 0; }
+            }
+        }
         private Jugador()
         {
             this.promedioGoles = 0;
@@ -31,12 +42,12 @@ namespace Entidades
         public string MostrarDatos()
         {
             StringBuilder s = new StringBuilder();
-            this.promedioGoles= this.GetPromedioGoles();
+            //his.promedioGoles= this.GetPromedioGoles();
             s.AppendLine($"nombre: {this.nombre}");
             s.AppendLine($"dni: {this.dni}");
             s.AppendLine($"p.jugados: {this.partidosJugados}");
             s.AppendLine($"t.goles: {this.totalGoles}");
-            s.AppendLine($"promedio: {this.promedioGoles}");
+            s.AppendLine($"promedio: {this.Promedio}");
 
             return s.ToString();
         }
@@ -52,16 +63,16 @@ namespace Entidades
             return !(a == b);
         }
 
-        public float GetPromedioGoles()
-        {
-            if (this.partidosJugados > 0)
-            {
-                int a = this.totalGoles;
-                int b = this.partidosJugados;
-                int v = a / b;
-                float x = v;
-                return x;
-            } else { return 0; }
-        }
+        //public float GetPromedioGoles()
+        //{
+        //    if (this.partidosJugados > 0)
+        //    {
+        //        int a = this.totalGoles;
+        //        int b = this.partidosJugados;
+        //        float v = a / b;
+        //        float x = v;
+        //        return 5;
+        //    } else { return 0; }
+        //}
     }
 }
