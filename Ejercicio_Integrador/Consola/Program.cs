@@ -13,7 +13,7 @@ namespace Consola
             
             CuentaOffShore messiOff = new CuentaOffShore(mesias, 123, 15000);
             CuentaOffShore mauriOff = new CuentaOffShore(mauri, 678, 25000);
-            //CuentaOffShore lazaroOff = new CuentaOffShore("lazaro", 456, 56000, eTipoCliente.EmpresarioCorrupto);
+            CuentaOffShore lazaroOff = new CuentaOffShore("lazaro", 456, 56000, eTipoCliente.EmpresarioCorrupto);
             CuentaOffShore otraDeMauri = new CuentaOffShore(mauri, 678,50000);
             CuentaOffShore fariOff = new CuentaOffShore(fariña, 666, 3500);
 
@@ -21,8 +21,9 @@ namespace Consola
             
             panamaPappers += messiOff;
             panamaPappers += mauriOff;
-            //panamaPappers += lazaroOff;
+            panamaPappers += lazaroOff;
             panamaPappers.MostrarParaiso();
+            
             panamaPappers += otraDeMauri;
             panamaPappers -= messiOff;
             panamaPappers -= fariOff;

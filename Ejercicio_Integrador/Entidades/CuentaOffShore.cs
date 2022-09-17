@@ -18,11 +18,8 @@ namespace Entidades
             this._dueño = c; this._numeroCuenta = n; this._saldo = s;
         }
 
-        //CuentaOffShore lazaroOff = new CuentaOffShore("lazaro", 456, 56000, eTipoCliente.EmpresarioCorrupto);
-        public CuentaOffShore(string x, int n, double s, eTipoCliente t)
+        public CuentaOffShore(string x, int n, double s, eTipoCliente t):this(new Cliente(t,x), n, s)
         {
-            Cliente c = new Cliente(t, x); //y el tipo d cliente???.... ahhh p eso era el tipo :D
-            CuentaOffShore z = new CuentaOffShore(c, n, s); // .... mmm???
         }
 
         public static explicit operator int(CuentaOffShore c2){

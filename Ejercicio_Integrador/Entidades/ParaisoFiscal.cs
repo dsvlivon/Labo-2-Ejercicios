@@ -62,10 +62,6 @@ namespace Entidades
 
         public static ParaisoFiscal operator +(ParaisoFiscal p, CuentaOffShore c)
         {
-            //if (p == c)
-            //{
-            //    //... como saco el saldo del elemento d la lista??? no del q recibo x parametros... Reutilizando???
-            //}
             foreach (var item in p._listadoCuentas)
             {
                 if (item == c) { 
