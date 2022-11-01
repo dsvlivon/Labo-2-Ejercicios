@@ -25,7 +25,8 @@ namespace InterfazPokedex
 
         private void FrmAlta_Load(object sender, EventArgs e)
         {
-            cmbTipos.DataSource = TipoDAO.Leer();
+            TipoDAO type = new TipoDAO();
+            cmbTipos.DataSource = type.Leer();
             txtEntrenador.Text = this.entrenador;
         }
 
@@ -51,8 +52,9 @@ namespace InterfazPokedex
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
             if (this.url != null && txtNombre.Text!= "" || txtNombre.Text != null) {
+                PokemonDAO pokeDao = new PokemonDAO();
                 poke = new Pokemon((int)nupId.Value, txtNombre.Text, cmbTipos.SelectedValue.ToString(), this.entrenador, this.url);
-                if (PokemonDAO.Guardar(poke)) { MessageBox.Show("SE GUARDO el Pokemon correctamente"); }
+                if (pokeDao.Guardar(poke)) { MessageBox.Show("SE GUARDO el Pokemon correctamente"); }
                 else { MessageBox.Show("NO SE GUARDO el Pokemon correctamente... "); }
             }
         }

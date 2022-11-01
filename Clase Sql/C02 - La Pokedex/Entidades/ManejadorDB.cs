@@ -7,31 +7,31 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public static class ManejadorDB
+    public class ManejadorDB
     {
         public static string initialDirectory = "C:\\Users\\L54556\\OneDrive - Kimberly-Clark\\Desktop\\DANIEL\\UTN\\labo-2-Ejercicios\\Clase Sql\\C02 - La Pokedex\\Media";
-        private static SqlConnection conexion;
-        private static SqlCommand comando;
-        private static SqlDataReader reader;
+        private SqlConnection conexion;
+        private SqlCommand comando;
+        private SqlDataReader reader;
 
-        static ManejadorDB()
+        public ManejadorDB()
         {
             comando = new SqlCommand();
             conexion = new SqlConnection("Data Source=.; Initial Catalog=Pokedex; Integrated Security=True;");
-            comando.Connection = ManejadorDB.conexion;
+            comando.Connection = conexion;
         }
-        public static SqlConnection Conexion {get { return ManejadorDB.conexion; }}
-        public static SqlCommand Comando { get { return ManejadorDB.comando; }}
-        public static void SetComandoText(string c) { ManejadorDB.comando.CommandText = c; }
-        public static SqlDataReader Reader{ get { return ManejadorDB.reader; }  set { reader = value; } }
+        public SqlConnection Conexion {get { return this.conexion; }}
+        public SqlCommand Comando { get { return this.comando; }}
+        public void SetComandoText(string c) { this.comando.CommandText = c; }
+        public SqlDataReader Reader{ get { return this.reader; }  set { this.reader = value; } }
 
-        public static bool Ejecutar()
+        public bool Ejecutar()
         {
             bool ret = false;
             try
             {
-                ManejadorDB.Conexion.Open();
-                ret = ManejadorDB.Comando.ExecuteNonQuery() >= 0 ? true : false;
+                this.Conexion.Open();
+                ret = this.Comando.ExecuteNonQuery() >= 0 ? true : false;
             }
             catch (Exception ex)
             {
@@ -39,9 +39,9 @@ namespace Entidades
             }
             finally
             {
-                if (ManejadorDB.Conexion.State == System.Data.ConnectionState.Open)
+                if (this.Conexion.State == System.Data.ConnectionState.Open)
                 {
-                    ManejadorDB.Conexion.Close();
+                    this.Conexion.Close();
                 }
             }
             return ret;

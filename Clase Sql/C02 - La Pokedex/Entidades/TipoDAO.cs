@@ -4,21 +4,21 @@ using System.Text;
 
 namespace Entidades
 {
-    public static class TipoDAO
+    public  class TipoDAO:ManejadorDB
     {
-        public static List<String> Leer()
+        public List<String> Leer()
         {
             List<String> l = new List<String>();
-            ManejadorDB.Comando.CommandText = "SELECT * FROM dbo.Tipos";
+            this.Comando.CommandText = "SELECT * FROM dbo.Tipos";
             try
             {
-                ManejadorDB.Conexion.Open();
-                ManejadorDB.Reader = ManejadorDB.Comando.ExecuteReader();
-                if (ManejadorDB.Reader.HasRows)
+                this.Conexion.Open();
+                this.Reader = this.Comando.ExecuteReader();
+                if (this.Reader.HasRows)
                 {
-                    while (ManejadorDB.Reader.Read())
+                    while (this.Reader.Read())
                     {
-                        l.Add(ManejadorDB.Reader["nombre"].ToString());
+                        l.Add(this.Reader["nombre"].ToString());
                     }
                 }
             }
@@ -28,9 +28,9 @@ namespace Entidades
             }
             finally
             {
-                if (ManejadorDB.Conexion.State == System.Data.ConnectionState.Open) { ManejadorDB.Conexion.Close(); }
-                ManejadorDB.Reader.Close();
-                ManejadorDB.Comando.CommandText = "caca";
+                if (this.Conexion.State == System.Data.ConnectionState.Open) { this.Conexion.Close(); }
+                this.Reader.Close();
+                this.Comando.CommandText = "caca";
             }
             return l;
         }

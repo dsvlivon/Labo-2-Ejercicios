@@ -4,29 +4,29 @@ using System.Text;
 
 namespace Entidades
 {
-    public static class PokemonDAO
+    public class PokemonDAO:ManejadorDB
     {
-        public static bool Guardar(Pokemon p)
+        public bool Guardar(Pokemon p)
         {
             string comando = "INSERT INTO dbo.Pokemon " +
             "(id, nombre, tipo, entrenador, urlImagen) VALUES (@id, @nombre, @tipo, @entrenador, @urlImagen);";
-            ManejadorDB.Reader.Close();
-            ManejadorDB.Comando.CommandText = comando;                
-                
-            ManejadorDB.Comando.Parameters.Clear();//ok
+            //Reader.Close();
+            this.Comando.CommandText = comando;
+
+            Comando.Parameters.Clear();//ok
             int id = p.Id;
             int type = p.Tipo;
             string nombre = p.Nombre;
             string trianer = p.Entrenador;
             string url = p.UrlImagen;
-            
-            ManejadorDB.Comando.Parameters.AddWithValue("@id", id);//ok
-            ManejadorDB.Comando.Parameters.AddWithValue("@nombre", nombre);//ok
-            ManejadorDB.Comando.Parameters.AddWithValue("@tipo", type);
-            ManejadorDB.Comando.Parameters.AddWithValue("@entrenador", trianer);
-            ManejadorDB.Comando.Parameters.AddWithValue("@urlImagen", url);
 
-            return ManejadorDB.Ejecutar();
+            Comando.Parameters.AddWithValue("@id", id);//ok
+            Comando.Parameters.AddWithValue("@nombre", nombre);//ok
+            Comando.Parameters.AddWithValue("@tipo", type);
+            Comando.Parameters.AddWithValue("@entrenador", trianer);
+            Comando.Parameters.AddWithValue("@urlImagen", url);
+
+            return Ejecutar();
         }
         //public static List<Persona> Leer()
         //{

@@ -25,7 +25,8 @@ namespace Entidades
         public string UrlImagen { get => urlImagen; set => urlImagen = value; }
         public int Tipo { get {
                 int cont = 1;
-                foreach (var item in TipoDAO.Leer())
+                TipoDAO t = new TipoDAO();
+                foreach (var item in t.Leer())
                 {
                     if (this.tipo == item) { return cont; }
                     cont++;
