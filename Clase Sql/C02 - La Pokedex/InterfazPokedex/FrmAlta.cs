@@ -16,6 +16,7 @@ namespace InterfazPokedex
         private string entrenador;
         private Pokemon poke;
         private string url;
+        
         public FrmAlta(string entrenador)
         {
             InitializeComponent();
@@ -33,7 +34,7 @@ namespace InterfazPokedex
             //Recordar OpenFileDialog
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
-                openFileDialog.InitialDirectory = "C:\\Users\\L54556\\OneDrive - Kimberly-Clark\\Desktop\\DANIEL\\UTN\\labo-2-Ejercicios\\Clase Sql\\C02 - La Pokedex\\Media";
+                openFileDialog.InitialDirectory = ManejadorDB.initialDirectory;
                 openFileDialog.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
                 openFileDialog.FilterIndex = 2;
                 openFileDialog.RestoreDirectory = true;

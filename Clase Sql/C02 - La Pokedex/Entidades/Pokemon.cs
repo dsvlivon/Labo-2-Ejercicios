@@ -16,7 +16,7 @@ namespace Entidades
             this.nombre = nombre;
             this.tipo = tipo;
             this.entrenador = entrenador;
-            this.urlImagen = urlImagen;
+            this.urlImagen = formatearUrlImagen(urlImagen);
         }
 
         public int Id { get => id; set => id = value; }
@@ -34,5 +34,10 @@ namespace Entidades
             } 
         }
 
+        private string formatearUrlImagen(string pic) {
+            //public string initialDirectory = "C:\\Users\\L54556\\OneDrive - Kimberly-Clark\\Desktop\\DANIEL\\UTN\\labo-2-Ejercicios\\Clase Sql\\C02 - La Pokedex\\Media";
+            string[] buf = pic.Split("x");
+            return buf[1];
+        }
     }
 }

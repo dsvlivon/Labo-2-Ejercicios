@@ -12,6 +12,7 @@ namespace InterfazPokedex
 {
     public partial class FrmPrincipal : Form
     {
+        
         private string entrenador;
         public FrmPrincipal(string entrenador)
         {

@@ -9,6 +9,7 @@ namespace Entidades
 {
     public static class ManejadorDB
     {
+        public static string initialDirectory = "C:\\Users\\L54556\\OneDrive - Kimberly-Clark\\Desktop\\DANIEL\\UTN\\labo-2-Ejercicios\\Clase Sql\\C02 - La Pokedex\\Media";
         private static SqlConnection conexion;
         private static SqlCommand comando;
         private static SqlDataReader reader;
