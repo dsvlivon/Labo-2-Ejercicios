@@ -97,7 +97,7 @@ namespace Entidades
         {
             Pokemon item = null;
             if (nombre != null && id is null) {
-                Comando.CommandText = $"SELECT * FROM dbo.Pokemon WHERE nombre = {nombre}";
+                Comando.CommandText = $"SELECT * FROM dbo.Pokemon WHERE nombre = '{nombre}'";
             }
             else { Comando.CommandText = $"SELECT * FROM dbo.Pokemon WHERE id = {id}"; }
             try
