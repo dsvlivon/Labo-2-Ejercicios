@@ -25,8 +25,8 @@ namespace InterfazPokedex
 
         private void FrmAlta_Load(object sender, EventArgs e)
         {
-            TipoDAO type = new TipoDAO();
-            cmbTipos.DataSource = type.Leer();
+            TipoDAO t = new TipoDAO();
+            cmbTipos.DataSource = t.Leer();
             txtEntrenador.Text = this.entrenador;
         }
 

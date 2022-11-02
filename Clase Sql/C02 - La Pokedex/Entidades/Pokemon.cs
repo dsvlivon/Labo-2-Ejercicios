@@ -10,13 +10,21 @@ namespace Entidades
         private string entrenador;
         private string urlImagen;
 
-        public Pokemon(int id, string nombre, string tipo, string entrenador, string urlImagen)
+        public Pokemon(int id, string nombre, string entrenador)
         {
-            this.id = id;
+            this.id = id;//Los pokemones no pueden tener ID repetidas, elegir un lugar donde validar ese dato.!!! FALTA!!!
             this.nombre = nombre;
-            this.tipo = tipo;
             this.entrenador = entrenador;
+        }
+        public Pokemon(int id, string nombre, string tipo, string entrenador, string urlImagen):this(id, nombre, entrenador)
+        {
+            this.tipo = tipo;
             this.urlImagen = formatearUrlImagen(urlImagen);
+        }
+        public Pokemon(int id, string nombre, int tipo, string entrenador, string urlImagen):this(id, nombre, entrenador)
+        {
+            this.tipo = obtenerTipo(tipo);
+            this.urlImagen = reFormatearUrlImagen(urlImagen);
         }
 
         public int Id { get => id; set => id = value; }
@@ -39,6 +47,15 @@ namespace Entidades
             //public string initialDirectory = "C:\\Users\\L54556\\OneDrive - Kimberly-Clark\\Desktop\\DANIEL\\UTN\\labo-2-Ejercicios\\Clase Sql\\C02 - La Pokedex\\Media";
             string[] buf = pic.Split("x");
             return buf[1];
+        }
+        public string reFormatearUrlImagen(string pic) {
+            return ManejadorDB.initialDirectory + pic;
+        }
+
+        public string obtenerTipo(int i)
+        {
+            TipoDAO t = new TipoDAO();
+            return t.Leer()[i];
         }
     }
 }

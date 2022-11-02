@@ -7,13 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Entidades;
 
 namespace InterfazPokedex
 {
     public partial class FrmPrincipal : Form
-    {
-        
+    {        
         private string entrenador;
+        private Pokemon poke = null;
         public FrmPrincipal(string entrenador)
         {
             InitializeComponent();
@@ -45,7 +46,18 @@ namespace InterfazPokedex
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-
+            PokemonDAO p = new PokemonDAO();
+            if (Int32.TryParse(txtBusqueda.Text, out int id))
+            {
+                poke = p.Leer(null, id);
+            }
+            else { poke = p.Leer(txtBusqueda.Text, null); }
+            lblIdTexto.Text = "ID: " + poke.Id.ToString();
+            lblNombre.Text = "Nombre: " + poke.Nombre;
+            lblTipo.Text = "Tipo: " + poke.Tipo;
+            lblEntrenadorPokemon.Text = "Entrenador: " + poke.Entrenador;
+            picPokemon.BackgroundImageLayout = ImageLayout.Stretch;
+            picPokemon.BackgroundImage = Image.FromFile(poke.UrlImagen);
         }
 
         private void btnPorEntrenador_Click(object sender, EventArgs e)

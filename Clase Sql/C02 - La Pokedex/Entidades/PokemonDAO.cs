@@ -59,37 +59,76 @@ namespace Entidades
         //    }
         //    return l;
         //}
-        //public static Persona LeerPorID(int id)
-        //{
-        //    Persona item = null;
-        //    ManejadorDB.Comando.CommandText = $"SELECT * FROM dbo.Persona WHERE ID = {id}";
-        //    try
-        //    {
-        //        ManejadorDB.Conexion.Open();
-        //        ManejadorDB.Reader = ManejadorDB.Comando.ExecuteReader();
-        //        if (ManejadorDB.Reader.HasRows)
-        //        {
-        //            while (ManejadorDB.Reader.Read())
-        //            {
-        //                item = new Persona(
-        //                    ManejadorDB.Reader["nombre"].ToString(),
-        //                    ManejadorDB.Reader["apellido"].ToString(),
-        //                    Convert.ToInt32(ManejadorDB.Reader["ID"].ToString())
-        //                );
-        //            }
-        //        }
-        //    }
-        //    catch (Exception e)
-        //    {
-        //        throw new ArchivosException($"ERROR EN  ObtenerProductos() - {e.Message} - {e.GetBaseException()}");
-        //    }
-        //    finally
-        //    {
-        //        if (ManejadorDB.Conexion.State == System.Data.ConnectionState.Open) { ManejadorDB.Conexion.Close(); }
-        //        ManejadorDB.Reader.Close();
-        //    }
-        //    return item;
-        //}
+        public Pokemon LeerPorID(int id)
+        {
+            Pokemon item = null;
+            Comando.CommandText = $"SELECT * FROM dbo.Pokemon WHERE ID = {id}";
+            try
+            {
+                Conexion.Open();
+                Reader = Comando.ExecuteReader();
+                if (Reader.HasRows)
+                {
+                    while (Reader.Read())
+                    {
+                        item = new Pokemon(
+                            Convert.ToInt32(Reader["id"]),
+                            Reader["nombre"].ToString(),
+                            Convert.ToInt32(Reader["tipo"]),
+                            Reader["entrenador"].ToString(),
+                            Reader["urlImagen"].ToString()
+                        );
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                throw new ArchivosException($"ERROR EN  ObtenerProductos() - {e.Message} - {e.GetBaseException()}");
+            }
+            finally
+            {
+                if (Conexion.State == System.Data.ConnectionState.Open) { Conexion.Close(); }
+                Reader.Close();
+            }
+            return item;
+        }
+        
+        public Pokemon Leer(string? nombre, int? id)
+        {
+            Pokemon item = null;
+            if (nombre != null && id is null) {
+                Comando.CommandText = $"SELECT * FROM dbo.Pokemon WHERE nombre = {nombre}";
+            }
+            else { Comando.CommandText = $"SELECT * FROM dbo.Pokemon WHERE id = {id}"; }
+            try
+            {
+                Conexion.Open();
+                Reader = Comando.ExecuteReader();
+                if (Reader.HasRows)
+                {
+                    while (Reader.Read())
+                    {
+                        item = new Pokemon(
+                            Convert.ToInt32(Reader["id"]),
+                            Reader["nombre"].ToString(),
+                            Convert.ToInt32(Reader["tipo"]),
+                            Reader["entrenador"].ToString(),
+                            Reader["urlImagen"].ToString()
+                        );
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                throw new ArchivosException($"ERROR EN  ObtenerProductos() - {e.Message} - {e.GetBaseException()}");
+            }
+            finally
+            {
+                if (Conexion.State == System.Data.ConnectionState.Open) { Conexion.Close(); }
+                Reader.Close();
+            }
+            return item;
+        }
         //public static bool Modifcar(Persona p)
         //{
         //    ManejadorDB.Comando.CommandText = "UPDATE dbo.Persona " +
