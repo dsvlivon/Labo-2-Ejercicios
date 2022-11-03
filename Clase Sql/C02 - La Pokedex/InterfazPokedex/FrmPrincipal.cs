@@ -15,10 +15,13 @@ namespace InterfazPokedex
     {        
         private string entrenador;
         private Pokemon poke = null;
+        public static List<Pokemon> equipo;
+        private int index;
         public FrmPrincipal(string entrenador)
         {
             InitializeComponent();
             this.entrenador = entrenador;
+            equipo = new List<Pokemon>();
         }
 
         private void FrmPrincipal_Load(object sender, EventArgs e)
@@ -28,8 +31,10 @@ namespace InterfazPokedex
             else if (this.entrenador == "Brock") { i = 1; }
             else if (this.entrenador == "Misty") { i = 2; }
             else { i = 4; }
-
+            btnAnterior.Enabled = false;
+            btnSiguiente.Enabled = false;
             this.picEntrenador.Image = imageList1.Images[i];
+            this.index = 0;
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -37,43 +42,53 @@ namespace InterfazPokedex
             FrmAlta frmAlta = new FrmAlta(this.entrenador);
             frmAlta.ShowDialog();
         }
-
-
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             PokemonDAO p = new PokemonDAO();
             if (Int32.TryParse(txtBusqueda.Text, out int id))
             {
-                poke = p.Leer(null, id);
+                this.poke = p.Leer(null, id);
             }
-            else { poke = p.Leer(txtBusqueda.Text, null); }
-            lblIdTexto.Text = "ID: " + poke.Id.ToString();
-            lblNombre.Text = "Nombre: " + poke.Nombre;
-            lblTipo.Text = "Tipo: " + poke.Tipo;
-            lblEntrenadorPokemon.Text = "Entrenador: " + poke.Entrenador;
-            picPokemon.BackgroundImageLayout = ImageLayout.Stretch;
-            picPokemon.BackgroundImage = Image.FromFile(poke.UrlImagen);
+            else { this.poke = p.Leer(txtBusqueda.Text, null); }
+            if (this.poke is null) { MessageBox.Show("No existe el regist  ro!"); }
+            else
+            {
+                ManejadorPantalla();
+            }
         }
-
         private void btnPorEntrenador_Click(object sender, EventArgs e)
         {
-
+            FrmFiltro frmFiltro = new FrmFiltro();
+            frmFiltro.ShowDialog();
+            btnAnterior.Enabled = true;
+            btnSiguiente.Enabled = true;
+            if(FrmPrincipal.equipo.Count()>0)
+            {
+                this.poke = FrmPrincipal.equipo[index];
+            } ManejadorPantalla();
         }
-
-
         private void btnSiguiente_Click(object sender, EventArgs e)
         {
-
+            if (FrmPrincipal.equipo.Count() > 0)
+            {
+                if (this.index == FrmPrincipal.equipo.Count() - 1) { this.index = 0; }
+                else { index ++; }
+                this.poke = FrmPrincipal.equipo[index];
+            } ManejadorPantalla();
         }
-
         private void btnAnterior_Click(object sender, EventArgs e)
         {
- 
+            if (FrmPrincipal.equipo.Count() > 0)
+            {
+                if (this.index == 0) { this.index = FrmPrincipal.equipo.Count() - 1; }
+                else { index--; }
+                this.poke = FrmPrincipal.equipo[index];
+            }
+            ManejadorPantalla();
         }
 
         private void btnPorTipo_Click(object sender, EventArgs e)
@@ -93,12 +108,40 @@ namespace InterfazPokedex
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-  
+            PokemonDAO p = new PokemonDAO();
+            if (this.poke != null)
+            {
+                var confirmar = MessageBox.Show($"Se eliminara el registro, {this.poke.Id} esta de acuerdo ?", "Confirmar Borrar!!", MessageBoxButtons.YesNo);
+                if (confirmar == DialogResult.Yes)
+                {
+                    p.Borrar(poke.Id);
+                }
+                this.poke = null;
+                ManejadorPantalla();
+            }
         }
-
         private void btnSerializacion_Click(object sender, EventArgs e)
         {
+            
+        }
 
+        private void ManejadorPantalla() {
+            if (this.poke is null)
+            {
+                lblIdTexto.Text = "ID: ";
+                lblNombre.Text = "Nombre: ";
+                lblTipo.Text = "Tipo: ";
+                lblEntrenadorPokemon.Text = "Entrenador: ";
+                picPokemon.BackgroundImage = null;
+            } else
+            {
+                lblIdTexto.Text = "ID: " + this.poke.Id.ToString();
+                lblNombre.Text = "Nombre: " + this.poke.Nombre;
+                lblTipo.Text = "Tipo: " + this.poke.Tipo;
+                lblEntrenadorPokemon.Text = "Entrenador: " + this.poke.Entrenador;
+                picPokemon.BackgroundImageLayout = ImageLayout.Stretch;
+                picPokemon.BackgroundImage = Image.FromFile(this.poke.UrlImagen);
+            }
         }
     }
 }

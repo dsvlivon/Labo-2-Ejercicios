@@ -28,41 +28,11 @@ namespace Entidades
 
             return Ejecutar();
         }
-        //public static List<Persona> Leer()
-        //{
-        //    List<Persona> l = new List<Persona>();
-        //    ManejadorDB.Comando.CommandText = "SELECT * FROM dbo.Persona";
-        //    try
-        //    {
-        //        ManejadorDB.Conexion.Open();
-        //        ManejadorDB.Reader = ManejadorDB.Comando.ExecuteReader();
-        //        if (ManejadorDB.Reader.HasRows)
-        //        {
-        //            while (ManejadorDB.Reader.Read())
-        //            {
-        //                Persona x = new Persona(
-        //                    ManejadorDB.Reader["nombre"].ToString(),
-        //                    ManejadorDB.Reader["apellido"].ToString(),
-        //                    Convert.ToInt32(ManejadorDB.Reader["ID"].ToString()));
-        //                l.Add(x);
-        //            }
-        //        }
-        //    }
-        //    catch (Exception e)
-        //    {
-        //        throw new ArchivosException($"ERROR EN  ObtenerProductos() - {e.Message} - {e.GetBaseException()}");
-        //    }
-        //    finally
-        //    {
-        //        if (ManejadorDB.Conexion.State == System.Data.ConnectionState.Open) { ManejadorDB.Conexion.Close(); }
-        //        ManejadorDB.Reader.Close();
-        //    }
-        //    return l;
-        //}
-        public Pokemon LeerPorID(int id)
+        public List<Pokemon> LeerPorEntrenador(string trainer)
         {
+            List<Pokemon> l = new List<Pokemon>();
             Pokemon item = null;
-            Comando.CommandText = $"SELECT * FROM dbo.Pokemon WHERE ID = {id}";
+            Comando.CommandText = $"SELECT * FROM dbo.Pokemon WHERE entrenador = '{trainer}'";
             try
             {
                 Conexion.Open();
@@ -72,12 +42,13 @@ namespace Entidades
                     while (Reader.Read())
                     {
                         item = new Pokemon(
-                            Convert.ToInt32(Reader["id"]),
-                            Reader["nombre"].ToString(),
-                            Convert.ToInt32(Reader["tipo"]),
-                            Reader["entrenador"].ToString(),
-                            Reader["urlImagen"].ToString()
-                        );
+                             Convert.ToInt32(Reader["id"]),
+                             Reader["nombre"].ToString(),
+                             Convert.ToInt32(Reader["tipo"]),
+                             Reader["entrenador"].ToString(),
+                             Reader["urlImagen"].ToString()
+                         );
+                        l.Add(item);
                     }
                 }
             }
@@ -90,9 +61,8 @@ namespace Entidades
                 if (Conexion.State == System.Data.ConnectionState.Open) { Conexion.Close(); }
                 Reader.Close();
             }
-            return item;
+            return l;
         }
-        
         public Pokemon Leer(string? nombre, int? id)
         {
             Pokemon item = null;
@@ -158,5 +128,23 @@ namespace Entidades
         //        if (ManejadorDB.Conexion.State == System.Data.ConnectionState.Open) { ManejadorDB.Conexion.Close(); }
         //    }
         //}
+        public bool Borrar(int id)
+        {
+            Comando.CommandText = "DELETE FROM dbo.Pokemon WHERE ID = @id";
+            try
+            {
+                Comando.Parameters.Clear();
+                Comando.Parameters.AddWithValue("@id", id);
+                return Ejecutar();
+            }
+            catch (Exception e)
+            {
+                throw new ArchivosException($"ERROR EN  ObtenerProductos() - {e.Message} - {e.GetBaseException()}");
+            }
+            finally
+            {
+                if (Conexion.State == System.Data.ConnectionState.Open) { Conexion.Close(); }
+            }
+        }
     }
 }

@@ -56,6 +56,7 @@ namespace InterfazPokedex
                 poke = new Pokemon((int)nupId.Value, txtNombre.Text, cmbTipos.SelectedValue.ToString(), this.entrenador, this.url);
                 if (pokeDao.Guardar(poke)) { MessageBox.Show("SE GUARDO el Pokemon correctamente"); }
                 else { MessageBox.Show("NO SE GUARDO el Pokemon correctamente... "); }
+                this.Close();
             }
         }
     }
